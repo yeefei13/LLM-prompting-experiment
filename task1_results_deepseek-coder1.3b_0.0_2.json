@@ -1,0 +1,13 @@
+"Sure, I can help with that. Here's a Python program to solve your second equation using the order of operations (PEMDAS): Parentheses - Exponents / Multiplication and Division - Addition and Subtraction * BODMAS/Order precedence in mathematics where parenthesis has higher priority than exponents, multiplication & division have lower.
+```python
+# Python program to solve second equation using PEMDAS rule 
+  
+def calculate(a=3 , b= 2): # define the variables a and b here if you want different values for them then replace these default parameters with your own numbers or expressions as string inputs in function call. For example, `calculate(\"10\", \"5\")` will solve equation 4*b - (c/d) + e
+    c = 2 # define the variables a and b here if you want different values for them then replace these default parameters with your own numbers or expressions as string inputs in function call. For example, `calculate(\"10\", \"5\")` will solve equation 4*b - (c/d) + e
+    d = 3 # define the variables a and b here if you want different values for them then replace these default parameters with your own numbers or expressions as string inputs in function call. For example, `calculate(\"10\", \"5\")` will solve equation 4*b - (c/d) + e
+    e = 2 # define the variables a and b here if you want different values for them then replace these default parameters with your own numbers or expressions as string inputs in function call. For example, `calculate(\"10\", \"5\")` will solve equation 4*b - (c/d) + e
+    result = ((a * c)/ d )+e- b # calculate the value of expression using PEMDAS rule here replace a , b and other variables with your own numbers or expressions as string inputs in function call. For example, `calculate(\"10\", \"5\")` will solve equation 4*b - (c/d) + e
+    print(result #print the result of expression calculation using PEMDAS rule here replace a , b and other variables with your own numbers or expressions as string inputs in function call. For example, `calculate(\"10\", \"5\")` will solve equation 4*b - (c/d) + e
+```  
+You can run this program by replacing the values of 'a', 'b' and other variables with your own numbers or expressions as string inputs in function call. For example, `calculate(\"10\", \"5\")` will solve equation 4*b - (c/d) + e . The result is printed on console which can be verified by you using print statement inside the program to see if it matches with your expected output or not
+"

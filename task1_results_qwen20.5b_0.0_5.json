@@ -1,0 +1,13 @@
+"The given math expression is:
+\\[3 \\times 2 + 2 - \\frac{2}{2} \\times 3 - 3 + 1\\]
+
+Let's first handle multiplication and division from left to right. The standard order of operations (PEMDAS/BODMAS) rules suggest that we start with the multiplication and division from left to right, followed by addition and subtraction from left to right.
+
+In this case:
+\\[3 \\times 2 = 6\\]
+\\[2 - \\frac{2}{2} \\times 3 = 2 - 1 = 1\\]
+
+Now, let's simplify the expression:
+\\[1 + 1 = 2\\]
+
+So, the final answer is \\(2\\)."

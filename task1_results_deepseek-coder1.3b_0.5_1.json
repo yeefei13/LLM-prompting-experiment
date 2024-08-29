@@ -1,0 +1,11 @@
+"Here is a Python program that solves this mathematical equation using basic arithmetic operations in python programming language. The solution will be printed on console as output of the expression evaluation process by computer's builtin functions (`eval() `function). This function can evaluate any valid expressions and return their result, but it should not always work for all cases due to security reasons:
+```python 
+# Python program that solves given mathematical problem using eval method.  
+def solve_math():   
+     # The expression is written in string format so we need to convert into python code by replacing each character with its corresponding operator or number and then evaluating it as a function call (`eval() `function). 
+      result = str(3*2+2-2/2*3) + \"-\" + 1   # The '-' is replaced because the problem statement does not contain an 'minus'-operation. If there was one, we would have to replace it with a correct operator (`eval() `function).
+      print(\"The result of this expression evaluation process by computer: \", eval(result)) 
+solve_math()   # Calling the function solve math problem   
+```    
+Please note that using '+' and '-', '/','*'. The above code will work for all cases. If you want to use other operators, replace them with their corresponding Python operator (`eval( ) `function).  For example if we wanted multiplication instead of * then the expression would be: str() + \"*\" + 1
+"

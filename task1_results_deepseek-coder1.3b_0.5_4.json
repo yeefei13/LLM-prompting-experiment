@@ -1,0 +1,11 @@
+"Sure! Let's solve it step by-step using Python programming language for better understanding of each operation in a mathematical context. Here is how you can do this with python code snippet below which uses PEMDAS (Order of operations) rule to calculate the expression `3 * 2 + 2 - 2 / 2 * 3 - 3 + 1`:
+```python
+# Python program for solving given mathematical expressions using order-based evaluation method.  
+def solve_expression():   
+     # Step by step calculation of each operation in a way that follows PEMDAS rule (Parentheses, Exponents/Roots and Multiplication Division -> Addition Subtraction). 
+      result = 3 * ((2 + 4) / 1.5 )-6 +8  
+       # Print the final answer   
+     print(\"The solution is: \",result)       
+solve_expression()         
+```        ` ```python (end of code snippet for python program to solve mathematical expression using PEMDAS rule.) 3 * ((2 + 4)/1.5 )-6 +8  = 7 -> 9/0, which is undefined in mathematics and hence not possible here as per the given problem statement `(let's assume that we are solving for x)`
+"

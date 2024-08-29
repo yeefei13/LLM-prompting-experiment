@@ -1,0 +1,14 @@
+"Sure! Here is a Python program that solves this mathematical equation using BODMAS rule (Brackets/Orders -> Division & Multiplication / Orders-> Addition And Subtraction). This method follows the order of operations in mathematics, which means it will first perform parentheses and then multiplication or division.
+```python 
+# Python program to solve given mathematical expression using BODMAS rule:  3 * (2 + 4) - ((10 / 5 )*6)-7+8    #Bodmas Rule is used here for simplification of the equation step by-step, starting from leftmost parenthesis.
+def calculate_expression():    
+      part1 = 3*(2 +(4))   # (Parentheses are not considered in BODMAS rule)  Here we perform multiplication and addition first then subtraction is performed next due to the order of operations given by mathematical rules, ie., left-to right.   
+      
+      print(\"Part1: \", part1 )    
+  
+      # Now for division operation (Parentheses are considered in BODMAS rule)  Here we perform multiplication and subtraction first then addition is performed next due to the order of operations given by mathematical rules, ie., left-to right.   
+      
+      print(\"Part2: \", ((10/5)*6 - (4*3)) )     # Subtracts from 90 which equals part1 and adds it with result obtained after performing multiplication & subtraction operations in Part1 to get final answer  
+       
+calculate_expression()   ```     `# Calling the function ``` calculate_expressions () ``. It will solve your given mathematical expression using BODMAS rule step by-step, starting from leftmost parenthesis and then performing multiplication & division operations in a way that follows order of operation rules ie., brackets/orders -> Division And Multiplication / Orders \u2013>  Addition AND Subtraction.
+"

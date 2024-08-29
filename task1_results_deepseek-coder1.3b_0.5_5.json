@@ -1,0 +1,21 @@
+"Sure! Let's solve this using Python programming language as follows - first we will follow PEMDAS (Parentheses/Brackets First / Order of Operations) and then use BODMAS rule for simplifying expressions like in Scenario2. Here is the python code to do that:
+```python 
+#Scenario1 using Python's built-in eval() function with PEMDAS (Parentheses/Brackets First / Order of Operations) and BODMAS rule for simplifying expressions like in Scenarios2.  
+result = ((3 * 2 + (2 - 2)) / 2 + 1 ) #PEMDAS: Parenthesis, Bracket first then Multiplication & Division followed by Addition/Subtraction(BODMAS) and finally addition of the last number in parentheses to get final result.
+print(\"Result using PEMDAS rule is : \",result) 
+#Output will be -1 as per Scenario2 (PEMDAS / BODMAS).  
+```   
+Alternatively, we can use Python's operator module which provides overloaded operators for arithmetic operations. Here it goes:    
+ ```python     
+import operator       # Importing the 'operator' Module in python 
+op = {k: v for k,v in zip(map(chr, range(ord('a'), ord('z')+1)), map(lambda x:x ,range(1,5)))}    # Creates a dictionary with operator symbols and their corresponding operations.  
+expr_str='3*2 + 2 - 2/2 * 3 - 3 + '     # Defining the expression string in infix notation (PEMDAS / BODMAS).     
+#print(f\"Expression is: {op['+']}\")    Prints out operator symbols.  
+expr_lst=list(map(lambda x:(x if x not in op else int(op[chr(int(x) + 32)])) , expr_str ))     # Converts the expression string into a list of integers using lambda function and operator dictionary.  
+#print (expr_lst, \"is: \", type(expr_lst), \"\
+\")    Prints out converted integer expressions in form [int,...] .     
+result = reduce((lambda x , y : int(x)  op str(y)), expr_lst ) # Reduce the list of integers using lambda function and operator dictionary.  
+#print(\"Result is: \", result, \"\
+\")    Prints out final answer in form [int,...] .     
+```     This code will give you a solution to your problem by following PEMDAS rule (Parentheses/Brackets First / Order of Operations) and BODMAS.  It also uses Python's operator module for simplifying the expression using overloaded operators in arithmetic operations as per Scenario2(PEMDAS & BODMAS).
+"

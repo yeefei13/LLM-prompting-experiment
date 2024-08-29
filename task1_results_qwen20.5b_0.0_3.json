@@ -1,0 +1,17 @@
+"The math expression is:
+\\[1. \\quad 3 \\times 2 + 2 - \\frac{2}{2} \\times 3 - 3 + 1\\]
+
+First, we multiply \\(3\\) by \\(2\\):
+\\[6 + 2 = 8\\]
+
+Then, we subtract \\(\\frac{2}{2}\\) times \\(3\\):
+\\[8 - \\frac{2}{2} \\times 3 = 8 - 3 = 5\\]
+
+Next, we add \\(3\\) to \\(5\\):
+\\[5 + 3 = 8\\]
+
+Finally, we subtract \\(1\\) from \\(8\\):
+\\[8 - 1 = 7\\]
+
+So the solution is:
+\\[7\\]"
