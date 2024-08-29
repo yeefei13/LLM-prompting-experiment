@@ -2,46 +2,80 @@ from langchain_ollama import ChatOllama
 import json
 
 # Define the LLM models and temperature settings you want to experiment with
-models = ["llama3.1", "phi3", "deepseek-coder-v2", "qwen2:7b"]
+models = ["gemma2:2b", "deepseek-coder:1.3b", "qwen2:0.5b"]
 temperatures = [0.0, 0.5, 0.7]
 
 # Define the learning tasks (replace these with your actual tasks)
-task1 = "Detect bug in given code."
-task2 = "Solve a math problem."
+task1 = "Solve a math problem."
+task2 = "Detect bug in given code."
 
 # Define your queries/prompts for each task
 queries_task1 = [
-    # Zero-Shot Prompting
-    "Q: Solve the following math problem: 1237 * 5321 A: ",  
+    # # Zero-Shot Prompting 
+    # """Q: Solve the following math problem: 
+    #   3*2+2-2/2*3-3+1
+    #  A: """,  
     
-    # One-Shot Prompting
-    "Q: What is 12 * 34? A: 408. Q: Solve the following math multiplication and give me an answer: 1237 * 5321 A: ",  
+    # # One-Shot Prompting
+    # """Q: Solve the following math expression:
+    # 1*4+1-1/1*2-1+2
+    # A: The correct order of operations gives us \( 4+1-2-1+2 = 4 \).
+    # Q: Solve the following math expression:
+    # 3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    # A: """,
     
-    # Few-Shot Prompting
-    "Q: What is 12 * 34? A: 408. Q: What is 56 * 78? A: 4368. Q: What is 23 * 45? A: 1035. Q: Solve the following math multiplication and give me an answer: 1237 * 5321 A: ",  
-    
-    # Chain-of-Thought (CoT) Prompting
-    "Q: Solve the following math problem: 1237 * 5321 Let's think step by step. First, multiply the digits of 1237 by the digits of 5321. Calculate each part of the multiplication. Add the partial results together to get the final answer. A: ",  
-    
-    # Tree-of-Thought (ToT) Prompting
-    "Q: Solve the following math problem: 1237 * 5321 Let's explore the possible steps: Scenario 1: Break down the multiplication into smaller parts. Multiply 1237 by 1. Multiply 1237 by 20 (which is 2 with an added zero). Multiply 1237 by 300. Multiply 1237 by 5000. Conclusion: After considering these approaches, sum the results of the partial multiplications to get the final answer. A: "
-]
+    # # gpt Prompting
+    # """Q: Solve the following math expression:
+    # 3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    # To solve this expression, let's break it down:
+    # 1. First, identify and perform any multiplication or division operations from left to right.
+    # 2. After performing each operation, simplify the expression step by step.
+    # 3. Once all multiplication and division are handled, proceed to perform addition and subtraction, also from left to right.
+    # A: """,    
+
+    # # # Chain-of-Thought (CoT) Prompting
+    # """Q: Solve the following math expression:
+    # 3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    # Let's solve this step by step. First, identify and perform any multiplication or division from left to right.
+    # Then, update the expression with the results of these operations.
+    # After handling multiplication and division, move on to addition and subtraction, solving from left to right.
+    # Finally, simplify the expression to find the answer.
+    # A: """,    
+
+    # # # Tree-of-Thought (ToT) Prompting
+    # """Q: Solve the following math expression:
+    # 3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    # Let's explore different approaches:
+    # Scenario 1: Follow the standard order of operations (PEMDAS/BODMAS). 
+    # First, handle multiplication and division from left to right.
+    # Scenario 2: Consider simplifying the expression by grouping similar operations together.
+    # After exploring these scenarios, simplify the expression to find the final answer.
+    # A: """,
+
+    # """Q:solve the following math expression:
+    # 3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    # do division first, then multiplication.
+    # do adding part step by step too.
+    # A:
+    # """,
+    ]
 
 queries_task2 = [
     """Q: what is the bug in blow code? Code: 
     #include <iostream>
+    int* allocateArray(int size) {
+        int arr[size];  
+        return arr;}
     int main() {
-        int x = 10;
-        int y = 0;
-        int result = x / y; // Division by zero error
-
-        std::cout << "Result: " << result << std::endl;
-
-        return 0;
-    } 
+        int* myArray = allocateArray(10);
+        myArray[0] = 1; 
+        std::cout << myArray[0] << std::endl;
+        return 0;}
+    please indicate the lines where the bug is and the bug type in few lines.
+    give me very short answer!
     A:
     """,  # Zero-shot example
-    "Q: Here is an example of a sentiment analysis: ... Now, classify this text: ... A:",  # One-shot example
+    # "Q: Here is an example of a sentiment analysis: ... Now, classify this text: ... A:",  # One-shot example
 ]
 
 # Function to run the queries with different models and temperatures
@@ -52,6 +86,7 @@ def run_experiments(models, temperatures, queries):
         llm = ChatOllama(
             model=model_name,
             temperature=0,  # Set initial temperature, it will be overridden
+            max_tokens=500
         )
         print(model_name)
         results[model_name] = {}
@@ -59,7 +94,7 @@ def run_experiments(models, temperatures, queries):
             results[model_name][f"temperature={temp}"] = {}
             for query in queries:
                 print(query)
-                result = llm.invoke(query, temperature=temp).content
+                result = llm.invoke(query, temperature=temp, max_tokens=500).content
                 results[model_name][f"temperature={temp}"][query] = result
     
     return results
