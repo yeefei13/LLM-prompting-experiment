@@ -1,0 +1,12 @@
+"The efficiency of the code can be analyzed by looking at its time complexity. The main part that takes longer to execute is in `splitAndProcess` function, which splits an array into two halves and recursively sorts them using a merge sort algorithm (which has average-case O(n log n) time).
+
+In the given code: 
+1. Creating new arrays L[] & R[], both of size mid - left + 1 or right - mid, takes linear space complexity i.e., O(mid - left +2), which is not efficient for large inputs (>~n log n) as it can lead to a memory overflow error in case the input array has too many elements and cannot fit into available system's heap/stack size or RAM.
+   
+2. The `combine` function merges two sorted arrays back together, which takes linear time complexity i.e., O(n), where n is total number of element (left + right). 
+   This operation can be performed in-place without any additional space requirements and thus has a constant overall efficiency regardless the size input array arr[]. However it does use extra memory for temporary arrays L[] & R[], which takes linear time complexity i.e., O(mid - left + 1 + right). 
+   
+3. The `splitAndProcess` function recursively splits an unsorted list into two halves, sorts them separately using merge sort algorithm and then merges the sorted lists back together in a way that preserves order (i.e., uses efficient comparison-based algorithms), which has linear time complexity i.e., O(n log n).
+   
+In conclusion: The overall efficiency of this code is dominated by `splitAndProcess` function, with an average case and worst cases being approximately 0(4logN) in the best scenario (when input array size grows logarithmically), but it can be improved to have a time complexity closer or equal O(n log n).
+"

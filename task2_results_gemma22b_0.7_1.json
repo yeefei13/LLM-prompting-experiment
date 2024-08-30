@@ -1,0 +1,8 @@
+"The code's efficiency is **O(n)**, where 'n' is the size of the array.  It uses a divide-and-conquer approach with recursive calls and merging operations. 
+
+
+**Explanation:**
+
+* **Divide:** The `splitAndProcess` function recursively divides the array into smaller subarrays.
+* **Conquer:** It combines the sorted subarrays using the `combine` function, resulting in a fully sorted array. 
+"

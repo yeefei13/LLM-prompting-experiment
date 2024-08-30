@@ -1,17 +1,776 @@
 {
     "gemma2:2b": {
-        "temperature=0.0": {},
-        "temperature=0.5": {},
-        "temperature=0.7": {}
+        "temperature=0.0": {
+            "Q: give me the efficiency of code.Code: 
+#include <iostream>
+
+void combine(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int* L = new int[n1];
+    int* R = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+
+    delete[] L;
+    delete[] R;
+}
+
+void splitAndProcess(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+
+        splitAndProcess(arr, left, mid);
+        splitAndProcess(arr, mid + 1, right);
+
+        combine(arr, left, mid, right);
+    }
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << \"Initial array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    splitAndProcess(arr, 0, arr_size - 1);
+
+    std::cout << \"Processed array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    return 0;
+}
+
+    give me very short answer!
+    A:
+    ": "The code's efficiency is **O(n)**, where 'n' is the size of the array.  It uses a divide-and-conquer approach with recursion and in-place merging. 
+
+
+**Explanation:**
+
+* **Divide:** The `splitAndProcess` function recursively divides the array into smaller subarrays.
+* **Conquer:** It calls `combine` to merge these subarrays back together, ensuring efficient sorting. 
+* **Combine:**  The `combine` function uses a merging algorithm (like two-pointer) to efficiently combine sorted subarrays.
+
+Let me know if you'd like more details on the specific efficiency aspects! "
+        },
+        "temperature=0.5": {
+            "Q: give me the efficiency of code.Code: 
+#include <iostream>
+
+void combine(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int* L = new int[n1];
+    int* R = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+
+    delete[] L;
+    delete[] R;
+}
+
+void splitAndProcess(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+
+        splitAndProcess(arr, left, mid);
+        splitAndProcess(arr, mid + 1, right);
+
+        combine(arr, left, mid, right);
+    }
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << \"Initial array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    splitAndProcess(arr, 0, arr_size - 1);
+
+    std::cout << \"Processed array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    return 0;
+}
+
+    give me very short answer!
+    A:
+    ": "The code's efficiency is **O(n)**, where 'n' is the size of the array.  It uses a divide-and-conquer approach with recursive calls and merging operations. 
+
+
+**Explanation:**
+
+* **Divide:** The `splitAndProcess` function recursively divides the array into smaller subarrays.
+* **Conquer:** It combines the sorted subarrays using the `combine` function, resulting in a fully sorted array. 
+"
+        },
+        "temperature=0.7": {
+            "Q: give me the efficiency of code.Code: 
+#include <iostream>
+
+void combine(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int* L = new int[n1];
+    int* R = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+
+    delete[] L;
+    delete[] R;
+}
+
+void splitAndProcess(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+
+        splitAndProcess(arr, left, mid);
+        splitAndProcess(arr, mid + 1, right);
+
+        combine(arr, left, mid, right);
+    }
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << \"Initial array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    splitAndProcess(arr, 0, arr_size - 1);
+
+    std::cout << \"Processed array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    return 0;
+}
+
+    give me very short answer!
+    A:
+    ": "The code's efficiency is **O(n)**, where 'n' is the size of the array.  It uses a divide-and-conquer approach with recursive calls and merging operations. 
+
+
+**Explanation:**
+
+* **Divide:** The `splitAndProcess` function recursively divides the array into smaller subarrays.
+* **Conquer:** It combines the sorted subarrays using the `combine` function, resulting in a fully sorted array. 
+"
+        }
     },
     "deepseek-coder:1.3b": {
-        "temperature=0.0": {},
-        "temperature=0.5": {},
-        "temperature=0.7": {}
+        "temperature=0.0": {
+            "Q: give me the efficiency of code.Code: 
+#include <iostream>
+
+void combine(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int* L = new int[n1];
+    int* R = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+
+    delete[] L;
+    delete[] R;
+}
+
+void splitAndProcess(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+
+        splitAndProcess(arr, left, mid);
+        splitAndProcess(arr, mid + 1, right);
+
+        combine(arr, left, mid, right);
+    }
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << \"Initial array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    splitAndProcess(arr, 0, arr_size - 1);
+
+    std::cout << \"Processed array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    return 0;
+}
+
+    give me very short answer!
+    A:
+    ": "The efficiency of the code can be analyzed by looking at its time complexity. The main part that takes longer to execute is in `splitAndProcess` function, which splits an array into two halves and recursively sorts them using a merge sort algorithm (which has average-case O(n log n) time).
+
+In the given code: 
+1. Creating new arrays L[] & R[], both of size mid - left + 1 or right - mid, takes linear space complexity i.e., O(mid - left +2), which is not efficient for large inputs (>~n log n) as it can lead to a memory overflow error in case the input array has too many elements and cannot fit into available system's heap/stack size or RAM.
+   
+2. The `combine` function merges two sorted arrays back together, which takes linear time complexity i.e., O(n), where n is total number of element (left + right). 
+   This operation can be performed in-place without any additional space requirements and thus has a constant overall efficiency regardless the size input array arr[]. However it does use extra memory for temporary arrays L[] & R[], which takes linear time complexity i.e., O(mid - left + 1 + right). 
+   
+3. The `splitAndProcess` function recursively splits an unsorted list into two halves, sorts them separately using merge sort algorithm and then merges the sorted lists back together in a way that preserves order (i.e., uses efficient comparison-based algorithms), which has linear time complexity i.e., O(n log n).
+   
+In conclusion: The overall efficiency of this code is dominated by `splitAndProcess` function, with an average case and worst cases being approximately 0(4logN) in the best scenario (when input array size grows logarithmically), but it can be improved to have a time complexity closer or equal O(n log n).
+"
+        },
+        "temperature=0.5": {
+            "Q: give me the efficiency of code.Code: 
+#include <iostream>
+
+void combine(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int* L = new int[n1];
+    int* R = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+
+    delete[] L;
+    delete[] R;
+}
+
+void splitAndProcess(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+
+        splitAndProcess(arr, left, mid);
+        splitAndProcess(arr, mid + 1, right);
+
+        combine(arr, left, mid, right);
+    }
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << \"Initial array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    splitAndProcess(arr, 0, arr_size - 1);
+
+    std::cout << \"Processed array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    return 0;
+}
+
+    give me very short answer!
+    A:
+    ": "The efficiency of the code can be measured by factors such as time complexity, space complexity and how much memory is used. However, in this case we are not considering these aspects because they're highly dependent on specifics like hardware architecture or software environment where it runs (like a desktop application). 
+
+However if you want to measure the efficiency of code for sorting algorithms such as merge-sort which has time complexity O(n log n), then this can be done. Here is how:
+
+1) Time Complexity - The main factor in determining whether an algorithm runs faster or slower than a similar one on average, under suitable assumptions about the input data and hardware environment where it's run (like modern desktop computers).  Merge-sort has O(n log n), but not all sorting algorithms have this property.
+2) Space Complexity - This is mainly concerned with memory usage which can be measured by using a profiler tool in the software or under specific conditions on your machine to see how much space it uses up during execution of code (like running multiple instances and observing).  Merge-sort has O(n), but not all sorting algorithms have this property.
+3) Hardware - The speed at which hardware can execute instructions, memory access speeds etc., is also a factor in determining the efficiency as well because different machines will perform operations differently due to their specifics (like cache sizes and other factors).  Merge-sort has O(n log n), but not all sorting algorithms have this property.
+"
+        },
+        "temperature=0.7": {
+            "Q: give me the efficiency of code.Code: 
+#include <iostream>
+
+void combine(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int* L = new int[n1];
+    int* R = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+
+    delete[] L;
+    delete[] R;
+}
+
+void splitAndProcess(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+
+        splitAndProcess(arr, left, mid);
+        splitAndProcess(arr, mid + 1, right);
+
+        combine(arr, left, mid, right);
+    }
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << \"Initial array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    splitAndProcess(arr, 0, arr_size - 1);
+
+    std::cout << \"Processed array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    return 0;
+}
+
+    give me very short answer!
+    A:
+    ": "The efficiency of the code can be measured by factors such as time complexity, space complexity and how much memory is used. However, in this case we are not considering these aspects because they're highly dependent on specifics like hardware architecture or software environment where it runs (like a desktop application). 
+
+However if you want to measure the efficiency of code for sorting algorithms such as merge-sort which has time complexity O(n log n), then this can be done. Here is how:
+
+1) Time Complexity - The main factor in determining whether an algorithm runs faster or slower than a similar one on average, under suitable assumptions about the input data and hardware environment where it's run (like modern desktop computers).  Merge-sort has O(n log n), but not all sorting algorithms have this property.
+2) Space Complexity - This is mainly concerned with memory usage which can be measured by using a profiler tool in the software or under specific conditions on your machine to see how much space it uses up during execution of code (like running multiple instances and observing).  Merge-sort has O(n), but not all sorting algorithms have this property.
+3) Hardware - The speed at which hardware can execute instructions, memory access speeds etc., is also a factor in determining the efficiency as well because different machines will perform operations differently due to their specifics (like cache sizes and other factors).  Merge-sort has O(n log n), but not all sorting algorithms have this property.
+"
+        }
     },
     "qwen2:0.5b": {
-        "temperature=0.0": {},
-        "temperature=0.5": {},
-        "temperature=0.7": {}
+        "temperature=0.0": {
+            "Q: give me the efficiency of code.Code: 
+#include <iostream>
+
+void combine(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int* L = new int[n1];
+    int* R = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+
+    delete[] L;
+    delete[] R;
+}
+
+void splitAndProcess(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+
+        splitAndProcess(arr, left, mid);
+        splitAndProcess(arr, mid + 1, right);
+
+        combine(arr, left, mid, right);
+    }
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << \"Initial array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    splitAndProcess(arr, 0, arr_size - 1);
+
+    std::cout << \"Processed array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    return 0;
+}
+
+    give me very short answer!
+    A:
+    ": "The code provided is a function that takes an array of integers and splits it into two halves, then combines the left half with the right half to form a sorted array. The efficiency of this code can be improved by using more efficient data structures or algorithms for splitting the array."
+        },
+        "temperature=0.5": {
+            "Q: give me the efficiency of code.Code: 
+#include <iostream>
+
+void combine(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int* L = new int[n1];
+    int* R = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+
+    delete[] L;
+    delete[] R;
+}
+
+void splitAndProcess(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+
+        splitAndProcess(arr, left, mid);
+        splitAndProcess(arr, mid + 1, right);
+
+        combine(arr, left, mid, right);
+    }
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << \"Initial array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    splitAndProcess(arr, 0, arr_size - 1);
+
+    std::cout << \"Processed array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    return 0;
+}
+
+    give me very short answer!
+    A:
+    ": "The code provided is a function that takes an array of integers as input and combines the elements into a new sorted array. The efficiency of this code depends on how well it can handle large arrays with varying sizes. It uses a divide-and-conquer approach to split the array in half, then recursively splits each half again before combining them. This allows for efficient sorting of larger arrays without needing to sort the entire array at once."
+        },
+        "temperature=0.7": {
+            "Q: give me the efficiency of code.Code: 
+#include <iostream>
+
+void combine(int arr[], int left, int mid, int right) {
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+
+    int* L = new int[n1];
+    int* R = new int[n2];
+
+    for (int i = 0; i < n1; i++)
+        L[i] = arr[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = arr[mid + 1 + i];
+
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        } else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
+    }
+
+    delete[] L;
+    delete[] R;
+}
+
+void splitAndProcess(int arr[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2;
+
+        splitAndProcess(arr, left, mid);
+        splitAndProcess(arr, mid + 1, right);
+
+        combine(arr, left, mid, right);
+    }
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6, 7};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    std::cout << \"Initial array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    splitAndProcess(arr, 0, arr_size - 1);
+
+    std::cout << \"Processed array:
+\";
+    for (int i = 0; i < arr_size; i++)
+        std::cout << arr[i] << \" \";
+    std::cout << std::endl;
+
+    return 0;
+}
+
+    give me very short answer!
+    A:
+    ": "The code provided is a function that takes an array of integers as input and combines the elements into a new sorted array. The efficiency of this code depends on how well it can handle large arrays with varying sizes. It uses a divide-and-conquer approach to split the array in half, then recursively splits each half again before combining them. This allows for efficient sorting of larger arrays without needing to sort the entire array at once."
+        }
     }
 }
