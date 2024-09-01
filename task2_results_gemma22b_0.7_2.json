@@ -1,0 +1,11 @@
+"Here's a breakdown of the time complexities for each code snippet:
+
+**Code 1:**  O(n^2) - The nested loops lead to quadratic complexity.
+
+**Code 2:** O(n) -  The loop iterates through the array once, making it linear.
+
+**Code 3:** O(n) - Simple and direct summation of elements.
+
+
+Let me know if you'd like a more detailed explanation! 
+"

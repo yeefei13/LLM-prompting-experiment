@@ -1,10 +1,15 @@
-"The code's efficiency is **O(n)**, where 'n' is the size of the array.  It uses a divide-and-conquer approach with recursion and in-place merging. 
+"Here's a breakdown of the time complexities for each code snippet:
+
+**Code A:**  O(n^2) - This is due to nested loops. The outer loop iterates 'size' times, and the inner loop runs from 0 to i.
+
+**Code B:** O(n) - This uses an array to store sums, making it more efficient than code A.
+
+**Code C:** O(n) -  This is a simple sum of all elements in the array.
 
 
 **Explanation:**
+* **O(n^2):** The nested loops in Code A lead to quadratic time complexity (doubling the size of the input array increases the number of operations). 
+* **O(n):** Code B and C have linear time complexity, as they iterate through the array once.
 
-* **Divide:** The `splitAndProcess` function recursively divides the array into smaller subarrays.
-* **Conquer:** It calls `combine` to merge these subarrays back together, ensuring efficient sorting. 
-* **Combine:**  The `combine` function uses a merging algorithm (like two-pointer) to efficiently combine sorted subarrays.
 
-Let me know if you'd like more details on the specific efficiency aspects! "
+Let me know if you'd like a more detailed explanation! "

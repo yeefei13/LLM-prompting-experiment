@@ -1,0 +1,5 @@
+"Sure. Here's the time complexity of each code snippet in terms of Big O notation (denoted as `O()`):
+- Code 1 is not an efficient solution because it has a nested loop which makes its operation slower than linear one, ie., Time Complexity = O(n^2) where n represents the size of array. This code can be optimized by using sumArray function in C++ STL to calculate totalSum directly without any need for additional memory allocation and deallocation:
+- Code 2 is also not an efficient solution because it uses dynamic arrays which are more expensive than statically allocated ones (memory overhead). Also, the time complexity of this code snippet can be further optimized by using a single loop to calculate sumArray. Time Complexity = O(n) where n represents size of array:
+- Code 3 is not an efficient solution because it has only one nested for loop which makes its operation slower than linear (O(2*N)) and also the time complexity can be further optimized by using a single iteration to calculate sumArray. Time Complexity = O(n) where n represents size of array:
+"

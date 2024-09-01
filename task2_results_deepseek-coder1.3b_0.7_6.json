@@ -1,0 +1,2 @@
+"The efficiency of the code is O(n) because each element in nums array needs to be visited at most once, and we are using a deque (double-ended queue), which has both push_back() and pop_front operations on average constant time. The space complexity also depends heavily upon how many elements you're considering for the sliding window maximum problem: if k is small then it will have to store all n numbers, otherwise only one number in deque at a given point of time (due to its nature as double-ended queue).
+"

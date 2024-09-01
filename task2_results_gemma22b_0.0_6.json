@@ -1,0 +1,18 @@
+"## Efficiency and Big O Notation Analysis:
+
+**Efficiency:** 
+* **Time Complexity:**  O(N) - The code iterates through the input array `nums` once.
+* **Space Complexity:** O(K) - We use a deque to store the sliding window elements, which has a size proportional to the window size `k`.
+
+
+**Big O Notation:**
+
+* **Time Complexity:**  O(N) 
+* **Space Complexity:** O(K) 
+
+
+
+**Explanation:**
+
+The code uses a deque (double-ended queue) for efficient sliding window operations. The time complexity is linear as we iterate through the array once, and the space complexity is proportional to the window size `k`. 
+"

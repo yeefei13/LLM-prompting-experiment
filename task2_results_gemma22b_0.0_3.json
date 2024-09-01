@@ -1,0 +1,17 @@
+"Here's a breakdown of the time complexities:
+
+**Rank:**
+
+1. **Code 3 (O(n))**:  This is the simplest and fastest. It iterates through the array once to calculate the sum.
+2. **Code 2 (O(n))**: This uses dynamic programming, which can be slightly more efficient than a simple loop for some cases. 
+3. **Code 1 (O(n^2))**:  This has nested loops that iterate over the array multiple times. The complexity increases significantly with larger arrays.
+
+
+**Explanation:**
+
+* **Time Complexity:** How long it takes to run the code, measured in terms of operations. 
+    * **O(n):** Linear time - the number of operations is directly proportional to the size of the input (array).
+    * **O(n^2):** Quadratic time - the time increases with the square of the input size. 
+
+
+Let me know if you'd like a more detailed explanation! "

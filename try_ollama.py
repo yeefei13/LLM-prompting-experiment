@@ -61,193 +61,405 @@ queries_task1 = [
     ]
 
 queries_task2 = [
-    # """Q: I have three piece of code rank them by efficiency Code: 
-    # #include <iostream>
+    """Q: I have three piece of code rank them by time complexity Code: 
+    #include <iostream>
 
-    # int sumArray(int arr[], int size) {
-    #     int sum = 0;
-    #     for (int i = 0; i < size; ++i) {
-    #         for (int j = 0; j <= i; ++j) {
-    #             if (j == i) {
-    #                 sum += arr[i];
-    #             }
-    #         }
-    #     }
-    #     return sum;
-    # }
-
-    # int main() {
-    #     int arr[] = {1, 2, 3, 4, 5};
-    #     int size = sizeof(arr) / sizeof(arr[0]);
-    #     std::cout << "Sum: " << sumArray(arr, size) << std::endl;
-    #     return 0;
-    # }
-
-    # #include <iostream>
-
-    # int sumArray(int arr[], int size) {
-    #     int* sums = new int[size];
-    #     sums[0] = arr[0];
-
-    #     for (int i = 1; i < size; ++i) {
-    #         sums[i] = sums[i - 1] + arr[i];
-    #     }
-
-    #     int totalSum = sums[size - 1];
-    #     delete[] sums;  // Cleaning up allocated memory
-    #     return totalSum;
-    # }
-
-    # int main() {
-    #     int arr[] = {1, 2, 3, 4, 5};
-    #     int size = sizeof(arr) / sizeof(arr[0]);
-    #     std::cout << "Sum: " << sumArray(arr, size) << std::endl;
-    #     return 0;
-    # }
-
-    # #include <iostream>
-
-    # int sumArray(int arr[], int size) {
-    #     int sum = 0;
-    #     for (int i = 0; i < size; ++i) {
-    #         sum += arr[i];
-    #     }
-    #     return sum;
-    # }
-
-    # int main() {
-    #     int arr[] = {1, 2, 3, 4, 5};
-    #     int size = sizeof(arr) / sizeof(arr[0]);
-    #     std::cout << "Sum: " << sumArray(arr, size) << std::endl;
-    #     return 0;
-    # }
-    # give me very short answer!
-    # A:
-    # """,  
-    # Zero-shot example
-
-
-
-    # """Q: give me the efficiency of code.Code: 
-    # #include <iostream>
-
-    # void combine(int arr[], int left, int mid, int right) {
-    #     int n1 = mid - left + 1;
-    #     int n2 = right - mid;
-
-    #     int* L = new int[n1];
-    #     int* R = new int[n2];
-
-    #     for (int i = 0; i < n1; i++)
-    #         L[i] = arr[left + i];
-    #     for (int i = 0; i < n2; i++)
-    #         R[i] = arr[mid + 1 + i];
-
-    #     int i = 0, j = 0, k = left;
-    #     while (i < n1 && j < n2) {
-    #         if (L[i] <= R[j]) {
-    #             arr[k] = L[i];
-    #             i++;
-    #         } else {
-    #             arr[k] = R[j];
-    #             j++;
-    #         }
-    #         k++;
-    #     }
-
-    #     while (i < n1) {
-    #         arr[k] = L[i];
-    #         i++;
-    #         k++;
-    #     }
-
-    #     while (j < n2) {
-    #         arr[k] = R[j];
-    #         j++;
-    #         k++;
-    #     }
-
-    #     delete[] L;
-    #     delete[] R;
-    # }
-
-    # void splitAndProcess(int arr[], int left, int right) {
-    #     if (left < right) {
-    #         int mid = left + (right - left) / 2;
-
-    #         splitAndProcess(arr, left, mid);
-    #         splitAndProcess(arr, mid + 1, right);
-
-    #         combine(arr, left, mid, right);
-    #     }
-    # }
-
-    # int main() {
-    #     int arr[] = {12, 11, 13, 5, 6, 7};
-    #     int arr_size = sizeof(arr) / sizeof(arr[0]);
-
-    #     std::cout << "Initial array:\n";
-    #     for (int i = 0; i < arr_size; i++)
-    #         std::cout << arr[i] << " ";
-    #     std::cout << std::endl;
-
-    #     splitAndProcess(arr, 0, arr_size - 1);
-
-    #     std::cout << "Processed array:\n";
-    #     for (int i = 0; i < arr_size; i++)
-    #         std::cout << arr[i] << " ";
-    #     std::cout << std::endl;
-
-    #     return 0;
-    # }
-
-    # give me very short answer!
-    # A:
-    # """,  
-
-
-
-    """Q: I have three piece of code rank them by efficiency Code: 
-    class Solution {
-    public:
-        double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-            vector<int>& A = nums1;
-            vector<int>& B = nums2;
-            if ( B.size()<A.size()){
-                swap(A,B);
-            }
-            int l = 0;
-            int r = A.size();
-            int total = A.size()+B.size();
-            int half = (total+1)/2;
-            while(l<=r){
-                int i = (l+r)/2;
-                int j = half-i;
-                int a1 = i>0 ? A[i-1]: INT_MIN;
-                int a2 = i<A.size()? A[i]: INT_MAX;
-                int b1 = j>0? B[j-1]: INT_MIN;
-                int b2 = j<B.size()? B[j]: INT_MAX;
-                if( a1<= b2 && b1<= a2){
-                    if(total%2 == 0){
-                        return (max(a1,b1)+min(a2,b2))/2.0;
-                    }
-                    else 
-                        return max(a1,b1);
-                }
-                else if(a1>b2){
-                    r = i -1;
-                }
-                else{
-                    l = i+1;
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
                 }
             }
         }
-    };
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    """,  
+
+
+
+
+
+    """Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    """,  
+
+
+
+
+
+    """Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+
+    give me very short answer and rememberremember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)!
+    A:
+    """,  
+
+
+
+
+
+
+    """Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << "Sum: " << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    remember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)
+    give me very short answer!
+    A:
+    """,  
+
+
+
+
+
+
+
+
+
+
+    """Q: give me the efficiency of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< "current rp: "<<nums[i]<<endl;
+                cout<<" current deque:";
+                for(auto j: cont){
+                    cout<< "  "<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< "current rp: "<<nums[rp]<<endl;
+            cout<<" current deque:";
+            for(auto i: cont){
+                cout<< "  "<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
     give me very short answer!
     A:
     """, 
 
 
+
+
+     """Q: give me the efficiency and big O notation of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< "current rp: "<<nums[i]<<endl;
+                cout<<" current deque:";
+                for(auto j: cont){
+                    cout<< "  "<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< "current rp: "<<nums[rp]<<endl;
+            cout<<" current deque:";
+            for(auto i: cont){
+                cout<< "  "<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    """, 
 ]
 
 # Function to run the queries with different models and temperatures

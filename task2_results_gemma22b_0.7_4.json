@@ -1,0 +1,9 @@
+"Here's a breakdown of the time complexities:
+
+**Code 1:** O(n^2) -  Nested loops lead to quadratic complexity.
+**Code 2:** O(n) -  Efficient, uses dynamic programming for summation.
+**Code 3:** O(n) - Simple and direct, linear time complexity. 
+
+
+Let me know if you'd like a more detailed explanation! 
+"

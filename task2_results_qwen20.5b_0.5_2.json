@@ -1,0 +1,5 @@
+"The time complexity of the first code snippet is O(n), where n is the length of the array. This is because we are iterating through the entire array once.
+
+The second code snippet has a time complexity of O(1) since it only uses a constant amount of extra space to store the sum and the index variable, which means that the running time does not depend on the size of the input array.
+
+The third code snippet also has a time complexity of O(n), but this time complexity is different from the first two codes. The second code snippet iterates through the entire array once, while the third code snippet uses a constant amount of extra space to store the sum and index variable."

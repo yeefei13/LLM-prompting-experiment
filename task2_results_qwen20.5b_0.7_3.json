@@ -1,0 +1,5 @@
+"Code 1: The code has a time complexity of O(n), where n is the size of the array. This means that the code runs in linear time, regardless of the size of the input.
+
+Code 2: The code has a time complexity of O(1), which means it can be solved without storing intermediate variables or using any external resources like arrays or pointers. It's an efficient solution for this problem.
+
+Code 3: The code has a time complexity of O(n^2), where n is the size of the array. This means that the code runs in quadratic time, regardless of the size of the input."

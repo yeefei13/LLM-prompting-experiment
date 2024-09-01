@@ -1,0 +1,7 @@
+"Code 1: The code has a time complexity of O(n), where n is the size of the array. This means that the running time increases linearly with the size of the input.
+
+Code 2: The code has a time complexity of O(1), which means it can be solved in constant time, regardless of the size of the input.
+
+Code 3: The code has a time complexity of O(n^2), which is quadratic. This means that the running time increases quadratically with the size of the input.
+
+Therefore, Code 1 is the most efficient code, followed by Code 2, and Code 3 is the most inefficient code."

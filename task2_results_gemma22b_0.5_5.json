@@ -1,0 +1,10 @@
+"The code's efficiency is **O(N)**, where N is the size of the input array `nums`. 
+
+**Explanation:**
+
+* The core logic involves iterating through the array using a sliding window approach. 
+* This uses deque for efficient insertion and removal operations (average O(1) time complexity). 
+
+
+Let me know if you'd like a more detailed breakdown! 
+"

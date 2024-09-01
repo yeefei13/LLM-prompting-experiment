@@ -1,0 +1,16 @@
+"Sure. Here's how you can evaluate each code snippet based on time complexity (Big O notation): 
+
+Code Snippets | Time Complexity Evaluation | 
+--------------|-------------------------------| 
+1) sumArray(int arr[], int size){}  |  Best-case: \u0398(n^2), Worst case and average :\u0398(n\u00b2). This is because the algorithm has two nested loops, each running up to n times. | 
+   
+2) 
+sumArray(arr[] + new arr[size], int size){}  |  Best-case: \u0398(1+\u221aN), Worst case and average :\u0398((n^3)/6). This is because the algorithm creates a dynamic array of n elements, which takes O(n) time. The sum operation itself also has quadratic complexity in terms of size (O(n)). | 
+   
+   Code 1: It's not efficient for large arrays due to its nested looping and high space usage as it uses an extra memory allocation 'sum'.| 
+    
+3 ) int main() {...} | Best-case : \u0398(N), Worst case & average =\u0398((n^2)/2). This is because the algorithm has a single for loop running up to n times. | 
+    \u2013 It's efficient as it only requires one pass through array and does not use any extra space apart from variables used in loops (i, j) which takes constant time O(1), so its efficiency remains high even with large arrays |  
+    
+In conclusion: Code Snippet #2 is the most efficiently. It uses dynamic memory allocation for summation of elements while maintaining a good balance between complexity and space usage as it only requires one pass through array, making this an efficient solution in terms of time (Big O notation) with respect to large arrays size n.
+"

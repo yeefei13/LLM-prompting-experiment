@@ -1,0 +1,3 @@
+"Sure. Based on time complexity analysis of these three codes below are their ranks (most to least efficient): 
+1st Code - O(n^2), because it has a nested loop which runs n times for each element in the array, leading us towards quadratic runtime ie., O(n\u00b2). This is not very efficient. The second code and third ones have linear time complexity as they only iterate through once or twice respectively but still this can be considered less optimal due to its use of dynamic memory allocation (heap) which could lead the program into inefficient usage if large arrays are passed, leading us towards quadratic runtime again ie., O(n\u00b2).
+"

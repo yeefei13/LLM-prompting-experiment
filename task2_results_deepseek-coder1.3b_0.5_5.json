@@ -1,0 +1,5 @@
+"The efficiency of the provided code is O((n-k)*log n) in worst case scenario, where 'n' represents size of input array and 'k' denotes window length. 
+
+This happens because for each element from index k to (n - k), we are performing a constant time operation: popping elements out the deque if they exceed current number or pushing them back into it in case their value is less than that, which takes O(log n) operations on average and worst-case scenario can be upto log^2(N). 
+Therefore overall complexity of this code would also fall under linear time complexities. The reason for using deque here (double ended queue), as it allows us to efficiently pop out the maximum element from both ends in O(1) operation, and push a new number into either end with respecting order which is required by problem statement ie., we need max of each window at any point during sliding.
+"

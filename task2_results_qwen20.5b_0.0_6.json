@@ -1,0 +1,5 @@
+"The code provided is a C++ program that implements a sliding window approach to find the maximum value in each contiguous subarray of size `k` within an array. The time complexity of this algorithm is O(n), where n is the length of the input array, and the space complexity is also O(n). This is because we need to store all elements from the start of the sliding window up to the current element, which takes linear time.
+
+The code also has a `cont` deque that stores the maximum values seen so far in each subarray. It uses a while loop to iterate through the array and update the maximum value seen so far in each subarray. The program then returns the maximum value from the last window as well as the current maximum value seen.
+
+The space complexity of this code is O(n) because it uses an additional `cont` deque to store the maximum values seen so far, which takes linear time."

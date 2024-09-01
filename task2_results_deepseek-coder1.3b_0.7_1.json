@@ -1,8 +1,15 @@
-"The efficiency of the code can be measured by factors such as time complexity, space complexity and how much memory is used. However, in this case we are not considering these aspects because they're highly dependent on specifics like hardware architecture or software environment where it runs (like a desktop application). 
+"Sure. Here's the time complexity analysis for each code snippet you provided (in Big O notation):
 
-However if you want to measure the efficiency of code for sorting algorithms such as merge-sort which has time complexity O(n log n), then this can be done. Here is how:
-
-1) Time Complexity - The main factor in determining whether an algorithm runs faster or slower than a similar one on average, under suitable assumptions about the input data and hardware environment where it's run (like modern desktop computers).  Merge-sort has O(n log n), but not all sorting algorithms have this property.
-2) Space Complexity - This is mainly concerned with memory usage which can be measured by using a profiler tool in the software or under specific conditions on your machine to see how much space it uses up during execution of code (like running multiple instances and observing).  Merge-sort has O(n), but not all sorting algorithms have this property.
-3) Hardware - The speed at which hardware can execute instructions, memory access speeds etc., is also a factor in determining the efficiency as well because different machines will perform operations differently due to their specifics (like cache sizes and other factors).  Merge-sort has O(n log n), but not all sorting algorithms have this property.
+1st Code Snippet - sumArray(int arr[], int size) {  // Time Complexity = O(n^2), where n is the number of elements in array 'arr'. This can be considered as quadratic time complexity. The code has nested loops, so it's not efficient for large arrays or data sets with many repetitions due to its high order terms (O(n) * O(n)).
+    #include <iostream>   // Time Complexity = O(1). This includes the standard library and only one function call. 
+}
+2nd Code Snippet - sumArray(int arr[], int size){//Time complexity is also quadratic, but this time it's linear (O(n)). The code creates an array of sums dynamically which requires O(n) space for the 'sums[]'. This can be considered as a combination of constant and linear terms.
+    #include <iostream>   // Time Complexity = O(1).  Only one function call, no dynamic memory allocation or deallocation so it's also efficient (O(n)). The space complexity is proportional to the size n in this case which can be considered as linear time.
+}   
+3rd Code Snippet - sumArray(int arr[], int size){//Time Complexity = O(1), since only one operation, no loops or dynamic memory allocation/deallocation so it's efficient (O(n)). The space complexity is also proportional to the input array. 
+    #include <iostream>   // Time and Space complexities are both constant because there\u2019re not nested iterations nor any data structures created in this function, thus they have a time-space tradeoff of O(1). This includes only one operation (addition) which is also considered as linear.
+} 
+So the best code snippet would be #include <iostream> sumArray(int arr[], int size){//Time complexity =O(n), space complexities are proportional to input array, and it's efficient for large arrays or data sets with many repetitions due its linear time. 
+    //#1st Code Snippet is the most optimal one considering all these factors in Big O notation (Big-Theta Notation). It has a lower order term than #2nd code snippet and also less space complexity compared to it, which makes this function more efficient for large data sets. 
+    //#3rd Code Snippet is the least optimal one considering all these factors in Big O notation (Big-Theta Notation). It has a higher order term than #2nd code snippet and also requires dynamic memory allocation/deallocation which makes this function less efficient for large data sets.
 "
