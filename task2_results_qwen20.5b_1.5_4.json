@@ -1,0 +1,5 @@
+"Code 1: Efficient because it iterates through all elements in linear time with O(1) complexity.
+  
+Code 2: Greedy approach where we always select the maximum element as far as possible from current maximum value. It's an efficient solution but inefficient because it creates unnecessary temporary variables.
+
+Code 3: Greedy approach is more than linear-time constant, O(log n)."

@@ -1,0 +1,11 @@
+"Here's a breakdown of the time complexities, ranked from fastest to slowest:
+
+**Rank (from fastest to slowest)**
+
+1. **Code 3:**  O(n) - Linear time complexity. This code simply iterates through the array once and adds its elements directly.
+2. **Code 2:** O(n) as well!  While it allocates an additional space, it has a simple logic that does this sum using one for loop to generate sums in place of an iterative one. 
+3. **Code 1:** O(n\u00b2) - The nested loops mean the complexity grows exponentially (worse) based on input size.
+
+
+
+Let me know if you'd like more details on the complexity analysis! "

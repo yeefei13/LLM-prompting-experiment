@@ -1,0 +1,9 @@
+"Here is how you would solve this mathematical problem step by-step in Python programming language (pseudo code):
+```python
+# first operation multiplies everything together and assigns it back into equation for next iterations
+equation = 3*2 - ((1 + 4)/(8 * 6)) # result: calculation based on given values. We don't have any direct correlation between variables, but let assume a common expression as shown below then replace the above variable in \"calculation\" line accordingly and execute this code one by-one for each step until we get desired output
+equation = -2 + 3/18 + (7*5)/(4+9) # result: simplification based on given values. Replace with your common expression to solve the final problem, then simplify as needed!  Include any required steps and evaluate it using appropriate Python code for calculation or equation solving
+print('Final answer is : ',equation )# print output of above lines (as per python context), make sure there's an operator/symbol next which should be '+', '-','*'/ '/'. Make same changes to these as you iterate through this process and simplify the result accordingly.   Include any final required mathematical operations in Python, such us: round(finalResult[0], 2) for a rounded off output upto two decimal places
+```     
+It should be noted that while I can't perform arithmetic calculation due to lack of information about '3*4+1'->6 or similar computations like the above code does not fully describe these type problem. You might want take some steps back if you are performing a series mathematical operations for understanding and applying them again based on contextual equations which would have been mentioned previously in text form (the given expression is \"3  *  2  +    4 -   5 /18\").
+"

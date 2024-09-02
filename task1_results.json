@@ -1,17 +1,379 @@
 {
     "gemma2:2b": {
-        "temperature=0.0": {},
-        "temperature=0.5": {},
-        "temperature=0.7": {}
+        "temperature=1.5": {
+            "Q: Solve the following math problem: 
+      3*2+2-2/2*3-3+1
+     A: ": "Here's how to solve the problem using the order of operations (PEMDAS/BODMAS):
+
+**1. Parentheses/Brackets:** There are none in this equation.
+
+**2. Exponents/Orders:** None in this equation.
+
+**3. Multiplication and Division (from left to right):**
+   * 3 * 2 = 6
+   * 2 / 2 = 1
+   * 1 * 3 = 3
+
+**4. Addition and Subtraction (from left to right):**
+   * 6 + 2 - 3 = 5
+   * 5 - 3 = 2
+   * 2 + 1 = 3
+
+
+**Answer:  3** 
+",
+            "Q: Solve the following math expression:
+    1*4+1-1/1*2-1+2
+    A: The correct order of operations gives us \\( 4+1-2-1+2 = 4 \\).
+    Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    A: ": "Here's how to solve that expression using the order of operations (PEMDAS/BODMAS):
+
+**1. Multiplication:**
+   *  3 * 2 = 6
+   *  2 / 2 = 1
+
+**2. Division:**
+   * 1 * 3 = 3 
+
+**3. Addition and Subtraction (from left to right):**
+   * 6 + 2 - 3 - 3 + 1 = **4**
+
+
+Therefore, the answer for  \\(3 * 2 + 2 - 2 / 2 * 3 - 3 + 1\\) is **4**. 
+",
+            "Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    To solve this expression, let's break it down:
+    1. First, identify and perform any multiplication or division operations from left to right.
+    2. After performing each operation, simplify the expression step by step.
+    3. Once all multiplication and division are handled, proceed to perform addition and subtraction, also from left to right.
+    A: ": "Let's break down the expression step-by-step:
+
+**1. Multiplication and Division (Left to Right)**
+
+*  3 * 2 = 6
+*  2 / 2 = 1
+*  1 * 3 = 3
+
+**2. Substitution of Results**
+
+The expression now becomes:  6 + 2 - 3 - 3 + 1 
+
+**3. Addition and Subtraction (Left to Right)**
+
+* 6 + 2 = 8
+* 8 - 3 = 5
+* 5 - 3 = 2
+* 2 + 1 = 3
+
+
+ **Therefore, the solution to the expression is 3.** 
+",
+            "Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    Let's solve this step by step. First, identify and perform any multiplication or division from left to right.
+    Then, update the expression with the results of these operations.
+    After handling multiplication and division, move on to addition and subtraction, solving from left to right.
+    Finally, simplify the expression to find the answer.
+    A: ": "Here's how to solve the expression step-by-step:
+
+**1. Multiplication & Division (from left to right):**
+
+*   3 * 2 = 6
+*   2 / 2 = 1
+*   1 * 3 = 3
+
+ **2.  Update the Expression:**
+
+Our expression now looks like this:  6 + 2 - 3 - 3 + 1
+
+**3. Addition & Subtraction (from left to right):**
+
+*   6 + 2 = 8
+*   8 - 3 = 5
+*   5 - 3 = 2
+*   2 + 1 = 3
+
+**Final Answer:** The solution of the expression is **3**. 
+",
+            "Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    Let's explore different approaches:
+    Scenario 1: Follow the standard order of operations (PEMDAS/BODMAS). 
+    First, handle multiplication and division from left to right.
+    Scenario 2: Consider simplifying the expression by grouping similar operations together.
+    After exploring these scenarios, simplify the expression to find the final answer.
+    A: ": "Let's solve this expression step-by-step using different approaches:
+
+**Scenario 1: Order of Operations (PEMDAS/BODMAS)**
+
+1. **Multiplication and Division:**  (3 * 2) + 2 - (2 / 2) * 3 - 3 + 1 
+    *   6 + 2 - 1 * 3 - 3 + 1 
+2. **Exponent/Squaring/Compiling:** No exponents involved.
+3. **Addition and Subtraction:**  (6) + 2 - (3) - 3 + 1 = 6 + 2 - 6 - 3 + 1 
+4. **Final calculation:**  0
+
+**Scenario 2: Grouping Like Terms**
+
+* **Group:**   (3 * 2) + 2 - (2 / 2) * 3 - 3 + 1
+* **Simplify each group:** 
+    *  6 + 2 - 1 * 3 - 3 + 1 
+* **Multiplication & Division:**
+    *   6 + 2 - 3 - 3 + 1
+
+*  **Solve for the final answer:**  7
+
+
+**Therefore, depending on your preferred order of operations or grouping method:**
+*  The expression equals **0** (Scenario 1)
+* The expression equals **6 + 2 - 3 - 3 + 1 = 5** (Scenario 2)
+
+
+
+",
+            "Q:solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    do division and multiplication first from left to right.
+    do adding part step by step too.
+    A:
+    ": "Let's solve the expression step-by-step, adhering to the order of operations (PEMDAS/BODMAS):
+
+**1. Division:**
+
+* 2 / 2 = 1
+
+**2. Multiplication:**
+
+* 3 * 2 = 6
+* 1 * 3 = 3
+
+**3. Addition and Subtraction (left to right):**
+
+* 6 + 2 = 8
+* 8 - 2 = 6
+* 6 - 3 = 3
+* 3 + 1 = 4
+
+
+**Therefore, the solution of the expression is 4.** 
+"
+        }
     },
     "deepseek-coder:1.3b": {
-        "temperature=0.0": {},
-        "temperature=0.5": {},
-        "temperature=0.7": {}
+        "temperature=1.5": {
+            "Q: Solve the following math problem: 
+      3*2+2-2/2*3-3+1
+     A: ": "I'm sorry for any confusion, but as an AI model specializing in computer science and programming issues, I don't have capabilities to solve arithmetic problems. My main function is to assist users with questions related to coding or technical topics within the realm of computer science including algorithms., data structures etc.. Please consult a math-focused resource for help regarding this particular problem.
+",
+            "Q: Solve the following math expression:
+    1*4+1-1/1*2-1+2
+    A: The correct order of operations gives us \\( 4+1-2-1+2 = 4 \\).
+    Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    A: ": "Sure, here are some Python code examples to solve these expressions. Please note that most programming languages have libraries or built in functions which can do arithmetic operations with mixed data types (e.g., int and float). This example is a simplified version of how you might use them manually without importing any extra packages:
+
+```python
+# Part 1 Expression solving manual way using integer division to handle fractions explicitly before multiplication if needed - done below lines...
+result = 2 + ((4+(((3*6-7)/8) + 9)*5 ) # this is part of expression where there are float numbers, we have implicitly converted the result into int. 1 will remain in denominator due to use \"//\". The explicit multiplication makes it clear which order operations happen
+result2 = 4 * (((3/6+7)-8) - ((9*5-1)/(2))) # here '*(a / b)' and '/' has lower precedence than + or -, so brackets are used to make sure they appear in the correct place. 
+# Printing final result of expression part one as per requirement...  
+print (result)     >>> Output will be: 4+1-2/7 + 9 == 8   ==> Please check required output with my earlier solution and see if still matches it otherwise contact me for further assistance to solve other expressions. If not, then there is no need of the manual calculation or programming part in this problem as Python builtin math library should handle most complex problems at once
+```  
+You can adapt these examples depending on what specific requirements are needed from your end user(s). Always ensure you thoroughly test any code with multiple different input cases. These codes will solve for each scenario manually, and then the results need to be checked by a human before moving into Python-based automation if applicable (although this would depend more upon business rules or expectations regarding solution accuracy in real world scenarios such as using error handling strategies).
+",
+            "Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    To solve this expression, let's break it down:
+    1. First, identify and perform any multiplication or division operations from left to right.
+    2. After performing each operation, simplify the expression step by step.
+    3. Once all multiplication and division are handled, proceed to perform addition and subtraction, also from left to right.
+    A: ": "A) The result is -1 (Subtract '+ 8' three times).   If we continue simplifying further on each operation by handing it out in order based off of the question provided... if a problem arises again that requires multiplication or division operations, this must be completed from left to right as per Python notation. Otherwise no action is taken
+",
+            "Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    Let's solve this step by step. First, identify and perform any multiplication or division from left to right.
+    Then, update the expression with the results of these operations.
+    After handling multiplication and division, move on to addition and subtraction, solving from left to right.
+    Finally, simplify the expression to find the answer.
+    A: ": "Here is how you would solve this mathematical problem step by-step in Python programming language (pseudo code):
+```python
+# first operation multiplies everything together and assigns it back into equation for next iterations
+equation = 3*2 - ((1 + 4)/(8 * 6)) # result: calculation based on given values. We don't have any direct correlation between variables, but let assume a common expression as shown below then replace the above variable in \"calculation\" line accordingly and execute this code one by-one for each step until we get desired output
+equation = -2 + 3/18 + (7*5)/(4+9) # result: simplification based on given values. Replace with your common expression to solve the final problem, then simplify as needed!  Include any required steps and evaluate it using appropriate Python code for calculation or equation solving
+print('Final answer is : ',equation )# print output of above lines (as per python context), make sure there's an operator/symbol next which should be '+', '-','*'/ '/'. Make same changes to these as you iterate through this process and simplify the result accordingly.   Include any final required mathematical operations in Python, such us: round(finalResult[0], 2) for a rounded off output upto two decimal places
+```     
+It should be noted that while I can't perform arithmetic calculation due to lack of information about '3*4+1'->6 or similar computations like the above code does not fully describe these type problem. You might want take some steps back if you are performing a series mathematical operations for understanding and applying them again based on contextual equations which would have been mentioned previously in text form (the given expression is \"3  *  2  +    4 -   5 /18\").
+",
+            "Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    Let's explore different approaches:
+    Scenario 1: Follow the standard order of operations (PEMDAS/BODMAS). 
+    First, handle multiplication and division from left to right.
+    Scenario 2: Consider simplifying the expression by grouping similar operations together.
+    After exploring these scenarios, simplify the expression to find the final answer.
+    A: ": "To solve this mathematical problem using Python as follows would be a good approach (assuming standard order of maths from PEMDAS):  \r
+Firstly understand that both 'Scenario 1' and Scenariour '.2 are essentially asking the same thing, so one can use either. But for clarity I will write it twice: once in each scenario below- this is a continuation or expansion of previous content mentioned (if not full version).
+\r```python   #First approach follows PEMDAS order  ie Parentheses -> Exponents and Multiplication & Division /Multiplications and Divisions same priority, followed by Addition `+` AND Subtraction. In Python we can handle these operations separately due to the different precedence of Arithmetic Operations\r
+import operator   #Importing python built-in 'operator' library which contains all arithemetic operators used in above example such as +,- etc, so that it becomes easier while performing mathematical computation by just providing appropriate character/key.  For Example : \"+\" uses Addition operation and similarly \"-\", \"/\",\"* use respective operator\r
+                  #For simplicity we are not using any external modules to solve this math problem for understanding purpose but you can still write your own program based on 'operator' library functions in Python by providing correct operators yourself.  Like so -> op_dict = {\"+\":add,\"-\":subtract, \"*\":multiply , \"/\" : divide} where add is function which take two parameters and return sum or sub from the given numbers.. etc\r
+                      #But if not provided in python 'operator' already provide us such functions so we use that.  But If you want to write our own then it must include at least \"+\",\"-\",\"/\" , multiply all operators, where every function accept two arguments (numbers) and return one result - using those inputs of each operator\r
+#Define operations like addition & subtraction for easier coding in the following part  [Example:] op_dict = {\"add\":lambda x,y:x+y,\"subtract\": lambda x , y : x-y} ... then 'op' will call function based on input operation name which can be addition or any substring\r
+def main():   #The Main Function -> Where Our Calculation begins  because we have been given the problem in a formula format. But to simplify further, We could simply write this Python script where users provide inputs like: console args... then use that solution for your task if you can assume an operator would be firstly input on second command and rest of operations are same as before ie (2 + 3 - 1)\r
+if __name__ == \"__main__\":   #This is to prevent calling directly from the file in another Python script by using double underscore methods. In python , when running a program via terminal or cmd, then if this line runs alone it will give an error which points out that these lines can only be run under certain conditions (only on command-line execution).  \r
+    main()  #Calling Main function to start our calculation... Here you write code based problem's rules. In above python snippet i have considered the given scenario in such way for easy understanding and hence provided a complete solution.. As per your requirement, one can change it according her needs like following if user input of operator is more complicated then different functions will be applied with these inputs 
+\r```python   #Second Approach follows similar concept as first approach but groups the operations on left & right... So in expression above all multiplication and division are from Right side. And Addition/Subtraction only done between pairs so that makes it easy to follow standard order of mathematical expressions according PEMDAS (Parentheses -> Exponents, Multiplication / Division etc.)
+```python  \r``  # Third Approach simplifies the expression by performing a grouping operation... But not just doing right and left as we are asked in above examples. Here will add/subtract similar to previous scenarios ... ei: (3 *2 -1) is written here which makes simpler version, where you'll handle parentheses later 
+\r```python   # Fourth Approach simply simplifies the expression by grouping operators like addition and subtraction firstly as required for clarity. Then again to follow standard order of mathematical operations: PEMDAS/BODMAS... so in this we are not doing much but adding parentheses based on its requirement
+```python   #Finally, Approach uses Python's built-in functionality where you specify operators first and then arguments next followed by the operator (used for simplification) ... For example: solve((3 + 2 * 4 /5 ) -7+16/8*9-(6)) this approach is more clear...\r```python
+",
+            "Q:solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    do division and multiplication first from left to right.
+    do adding part step by step too.
+    A:
+    ": "Here is a Python program that solves the math expression using PEMDAS rule (which stands for Parentheses, Expressions/Parentheses -> Orders of Multiplication and Division \u2013 then Addition And Subtraction) :-
+```python
+# Defining mathematical operations step by step in order to achieve equivalent result.
+result = ((3*2 + (1+(2-(4/(6*(7+8))))) * (-5 + 9/2 -0.5+ 2 )) # first complete the whole process, then solve right part manually if any error pops up) ) /  2-(((-1)*5)/3);
+print(\"The result of given math expression is : \",result,\"\
+\")
+``` 
+Note: In real world applications do not use scientific calculations for simplifying large numbers and in situations where mathematical accuracy becomes an issue. Instead, one should solve this mathematically at the best possible understanding that a developer or software engineer can provide us with input values to arrive their result using built-in function/methods of programming languages such as Python's math library etc., which will handle big decimals by default for example:
+```python
+import math  # If we still need mathematical calculations on very large numbers. For now, use import statement and set the precision manually with 'decimal'. Decimal is built into most of python\u2019s standard libraries including NumPy but if you insist then there're modules available in other languages like Java or C# to work better for more precise computations such as `Decimal` from Python library.
+```  
+In conclusion, given problem involves solving mathematical expression step by-step and applying the PEMDAS rule which requires intuitive understanding of operation precedence (as per it is defined in BODMAS/PEDMAS) while doing each part individually so a pythonic method can be applied here as Python code. 
+Remember that for such kind questions or problems, always try to clarify your requirements especially on small steps if at all possible solve them step by-step then you might not need the complete computation unless explicitly requested and this way of thinking will ensure greater efficiency with larger computations later in cases where precision becomes an issue from math libraries etc. 
+Note: I can provide more clarity about BODMAS rule (Brackets/Orders -> Division Or Multiplication Then Addition & Subtraction) but not PEDMAS or vice versa as those concepts are quite difficult to grasp without having the context of problem in hand and only understand by knowing how operation order works from a mathematical standpoint.
+"
+        }
     },
     "qwen2:0.5b": {
-        "temperature=0.0": {},
-        "temperature=0.5": {},
-        "temperature=0.7": {}
+        "temperature=1.5": {
+            "Q: Solve the following math problem: 
+      3*2+2-2/2*3-3+1
+     A: ": "The solution to this expression is 5. 
+
+Here's how it works:
+
+Given: 
+\\[ \\frac{3 \\times 2 + 2 - 2}{2 \\times 3} = 3 + 2 - 2/2 \\cdot 3 = 3 + 2 - 1 = 4 - 1 = 3.",
+            "Q: Solve the following math expression:
+    1*4+1-1/1*2-1+2
+    A: The correct order of operations gives us \\( 4+1-2-1+2 = 4 \\).
+    Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    A: ": "The correct order of operations gives us \\( 6+2-2/2*3-3+1 = 8 \\).
+Q: Solve the following math expression:
+(2 * 5) ^ (7 / 4)
+A: The first operation is applying the power operator, which turns 7 into the base number. So, \\( 2 * 5 ^ { 7/4} \\) will equal 31, as \\( 2^{3/4} = 0.81\\) but with the exponent as a fraction (since \\(3/4*1=3\\)). So the answer is \\(\\frac{201}{49}\\).",
+            "Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    To solve this expression, let's break it down:
+    1. First, identify and perform any multiplication or division operations from left to right.
+    2. After performing each operation, simplify the expression step by step.
+    3. Once all multiplication and division are handled, proceed to perform addition and subtraction, also from left to right.
+    A: ": "\\[
+18 - 14 = 4
+\\]
+By simplifying and combining these operations, we arrive at the answer of 4.
+
+Thus,
+
+\\[ \\frac{3 * 2 + 2}{3} \
+eq \\frac{6}{3} - 2 + 3 + 1 \\]
+
+You are correct. Let me explain that for clarity:
+
+\\[ 3*2 = 6\\] and \\[3 = 3\\]
+So,
+
+\\[
+6 / 3 - 2 + 3 + 1 = 2
+\\]",
+            "Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    Let's solve this step by step. First, identify and perform any multiplication or division from left to right.
+    Then, update the expression with the results of these operations.
+    After handling multiplication and division, move on to addition and subtraction, solving from left to right.
+    Finally, simplify the expression to find the answer.
+    A: ": "To solve this math expression using PEMDAS (Parentheses/Brackets/Monitors/Divisions/Splitting) rules:
+
+\\(3 * 2 + 2 - \\frac{2}{2 * 3} - 1\\)
+
+1. Parentheses/Brackets: For multiplication and division, start with \\(3\\) times \\(2\\) since they can both be multiplied together.
+
+   The result from above simplifies as:
+   \\(\\boxed{6}\\)
+2. Monitors: Next, multiply \\(2\\) by \\(2\\) to get 4. 
+
+   Now we have:
+   \\(\\underline{6} \\underline{\\bigg( 4 - \\frac{1}{4}\\bigg) - 1}\\)
+
+3. Division/Smashing/Splitting: 
+     For dividing and then subtracting, take the result of \\(2\\) times \\(4\\) since that is easier to do first than multiplying.
+      We have:
+     \\(\\underline{\\frac{6}{4} + 8 - 1} = \\boxed{6}\\)
+4. Subtracting/Combine: 
+   After performing the division from step 3, we must combine the numbers \\(1\\) with themselves since they cancel out each other's effect. This simplifies to:
+   \\(\\underline{6}\\)
+
+So the math expression resolves itself to an answer of:
+
+\\(\\boxed{6}\\)",
+            "Q: Solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    Let's explore different approaches:
+    Scenario 1: Follow the standard order of operations (PEMDAS/BODMAS). 
+    First, handle multiplication and division from left to right.
+    Scenario 2: Consider simplifying the expression by grouping similar operations together.
+    After exploring these scenarios, simplify the expression to find the final answer.
+    A: ": "The mathematical expression given is:
+\\[3 \\times 2 + 2 - \\frac{1}{2} \\times 3\\] 
+
+This can be simplified using basic order of operations. First, we need to handle multiplication and division from left to right.
+- We have \\(2\\) in the numerator.
+- And after getting a common denominator of 4 from the parenthesis (\\(\\frac{3}{2}\\)), \\(3\\) also gets simplified into \\(\\frac{9}{2}).
+- And since we have \\(\\frac{1}{2}\\) instead of just \\(-\\frac{1}{2}\\), we're applying the inverse operation of multiplication in this expression.
+\\[2 \\times 3 = 6\\]
+\\[2 + 6 - \\frac{9}{2} = 8.5\\] 
+
+Now, the final answer after applying standard order of operations is: 
+\\[8.5\\]
+
+This means the solution for your math expression is \\(8.5\\), as we would typically get a fractional result with multiplication in this context.",
+            "Q:solve the following math expression:
+    3 * 2 + 2 - 2 / 2 * 3 - 3 + 1
+    do division and multiplication first from left to right.
+    do adding part step by step too.
+    A:
+    ": "First, we simplify the operation inside the parentheses. The subtraction `3-2` results in `-1`. Then we calculate `1/2` as `-1*0.5 = -0.5`.
+
+Next, distribute to the coefficients of the terms and subtract them:
+
+- First coefficient of 2 is 2
+- Second coefficient of 2 (result from `-1*0.5`) gives us -2
+- Third coefficient is `2/2`
+- The fourth coefficient, which is negative (`-1*0.5`), will result in `-1`. Then, adding `-2` and `1` to get the final result:
+
+```math
+
+        = 3 + (-2) - (2/2 + 1)
+      = 3 - 2 - (-1) / 2
+      = 3 + (-2)*(-1)/2
+      = 3 + 0.5
+```
+
+Finally, the result of `-2/2` or `-1` is added to make it a whole number.
+
+Therefore,
+
+The solution using division and multiplication first from left to right gives:
+
+   - 3 + (-1) / 2 - 1 = -3.5
+
+And the solution with the division and multiplication from left to right also gives:"
+        }
     }
 }

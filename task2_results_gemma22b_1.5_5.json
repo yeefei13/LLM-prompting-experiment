@@ -1,0 +1,12 @@
+"The code's efficiency is **average O(n)** due to potential redundant operations and a need for multiple shifts, especially during the window processing stages. 
+
+
+Here's why it might be slower than pure array operations for certain use cases:
+
+* **Shifting:** The code heavily involves removing/rearranging elements (like `cont.pop_back()`) before finding new largest element. This can lead to more loops and potentially reduce efficiency.
+
+However, the exact time complexity depends on input data structure (whether the deque helps or hinders), potential overlap with sorting operations, and specific use cases like how often `cont` needs to shift elements during sliding windows. 
+
+
+**If you could provide an input scenario or performance metric concerns, that might make the analysis more targeted!** 
+"

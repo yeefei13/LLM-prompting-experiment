@@ -1,0 +1,4 @@
+"The correct order of operations gives us \\( 6+2-2/2*3-3+1 = 8 \\).
+Q: Solve the following math expression:
+(2 * 5) ^ (7 / 4)
+A: The first operation is applying the power operator, which turns 7 into the base number. So, \\( 2 * 5 ^ { 7/4} \\) will equal 31, as \\( 2^{3/4} = 0.81\\) but with the exponent as a fraction (since \\(3/4*1=3\\)). So the answer is \\(\\frac{201}{49}\\)."

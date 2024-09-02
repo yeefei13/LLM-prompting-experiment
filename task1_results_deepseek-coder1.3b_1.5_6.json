@@ -1,0 +1,15 @@
+"Here is a Python program that solves the math expression using PEMDAS rule (which stands for Parentheses, Expressions/Parentheses -> Orders of Multiplication and Division \u2013 then Addition And Subtraction) :-
+```python
+# Defining mathematical operations step by step in order to achieve equivalent result.
+result = ((3*2 + (1+(2-(4/(6*(7+8))))) * (-5 + 9/2 -0.5+ 2 )) # first complete the whole process, then solve right part manually if any error pops up) ) /  2-(((-1)*5)/3);
+print(\"The result of given math expression is : \",result,\"\
+\")
+``` 
+Note: In real world applications do not use scientific calculations for simplifying large numbers and in situations where mathematical accuracy becomes an issue. Instead, one should solve this mathematically at the best possible understanding that a developer or software engineer can provide us with input values to arrive their result using built-in function/methods of programming languages such as Python's math library etc., which will handle big decimals by default for example:
+```python
+import math  # If we still need mathematical calculations on very large numbers. For now, use import statement and set the precision manually with 'decimal'. Decimal is built into most of python\u2019s standard libraries including NumPy but if you insist then there're modules available in other languages like Java or C# to work better for more precise computations such as `Decimal` from Python library.
+```  
+In conclusion, given problem involves solving mathematical expression step by-step and applying the PEMDAS rule which requires intuitive understanding of operation precedence (as per it is defined in BODMAS/PEDMAS) while doing each part individually so a pythonic method can be applied here as Python code. 
+Remember that for such kind questions or problems, always try to clarify your requirements especially on small steps if at all possible solve them step by-step then you might not need the complete computation unless explicitly requested and this way of thinking will ensure greater efficiency with larger computations later in cases where precision becomes an issue from math libraries etc. 
+Note: I can provide more clarity about BODMAS rule (Brackets/Orders -> Division Or Multiplication Then Addition & Subtraction) but not PEDMAS or vice versa as those concepts are quite difficult to grasp without having the context of problem in hand and only understand by knowing how operation order works from a mathematical standpoint.
+"

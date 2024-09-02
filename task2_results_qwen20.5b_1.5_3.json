@@ -1,0 +1,9 @@
+"C:
+
+A: The second code snippet has a time complexity of O(n) due to nested loops while the first and third are in O(1). 
+
+The first code snippet's main function calculates the sum using two variables as well as another integer variable `sum`. It is straightforward, but it can be optimized slightly with string concatenation to use just one operation.
+
+Second code snippet has a time complexity of O(n) for computing sum, where n is number of elements in array. The third code snippet's main function simply sums the input array elements without creating separate variables, so its running time is still O(n).
+
+Therefore, C: 2 is more efficient than both other two snippets and second code snippet."

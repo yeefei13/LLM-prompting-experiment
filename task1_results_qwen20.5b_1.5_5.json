@@ -1,0 +1,14 @@
+"The mathematical expression given is:
+\\[3 \\times 2 + 2 - \\frac{1}{2} \\times 3\\] 
+
+This can be simplified using basic order of operations. First, we need to handle multiplication and division from left to right.
+- We have \\(2\\) in the numerator.
+- And after getting a common denominator of 4 from the parenthesis (\\(\\frac{3}{2}\\)), \\(3\\) also gets simplified into \\(\\frac{9}{2}).
+- And since we have \\(\\frac{1}{2}\\) instead of just \\(-\\frac{1}{2}\\), we're applying the inverse operation of multiplication in this expression.
+\\[2 \\times 3 = 6\\]
+\\[2 + 6 - \\frac{9}{2} = 8.5\\] 
+
+Now, the final answer after applying standard order of operations is: 
+\\[8.5\\]
+
+This means the solution for your math expression is \\(8.5\\), as we would typically get a fractional result with multiplication in this context."

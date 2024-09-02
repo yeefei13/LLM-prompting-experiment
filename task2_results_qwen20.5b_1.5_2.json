@@ -1,0 +1,45 @@
+"Codes for different problems with a specific time complexity (each) are listed below. I have only considered the three problem codes from your questions.
+1. Code 1: 
+```
+#include <iostream>
+
+int sumArray(int arr[], int size) {
+    int sum = 0;
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j <= i; ++j) {
+            if (j == i) 
+                sum += arr[i];
+        }
+    }  
+    return sum;
+}
+
+2. Code 2:
+```
+#include <iostream>
+
+int sumArray(int arr[], int size) {
+    int* sums = new int[size];
+    sums[0] = arr[0];
+
+    for (int i = 1; i < size; ++i) {
+        sums[i] = sums[i - 1] + arr[i];   
+    }
+
+    int totalSum = sums[size - 1];
+    delete[] sums;
+    return totalSum;
+}
+
+3. Code 3:
+```
+#include <iostream>
+
+int sumArray(int arr[], int size) {
+    int sum = 0;
+    for (int i = 0; i < size; ++i) 
+        sum += arr[i];
+
+    return sum;
+}
+```"

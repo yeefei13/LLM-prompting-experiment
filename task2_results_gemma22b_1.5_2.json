@@ -1,0 +1,11 @@
+"Here's a breakdown of the time complexity for your provided code snippets.
+
+**Code 1:** O(n^2) -  This involves nested loops to access elements in an array. 
+
+**Code 2:** O(n)  - Dynamic programming - The sums can be calculated efficiently and directly, using precalculation.
+
+
+**Code 3:** O(n)  - Direct summation; a very efficient approach for the calculation!
+
+Let me know if you want a more detailed analysis or further exploration into why this! 
+"

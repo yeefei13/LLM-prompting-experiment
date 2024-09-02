@@ -1,0 +1,11 @@
+"**Efficiency:** 
+
+* **Time Complexity:** O(N) - The algorithm processes each element of the input array only once.
+
+**Big O Notation:** 
+
+* **Best Case (All elements within k)**: O(K)  - The code utilizes deque and vectors to keep track of the max values in the sliding window for a maximum efficient time. 
+
+
+
+"

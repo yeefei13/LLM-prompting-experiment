@@ -1,0 +1,12 @@
+"Here's a quick breakdown of their time complexities:
+
+**Code 1:**  **O(n\u00b2)** (Linear + Linear inside loops. O(n^2))
+**Code 3:**  **O(n)** (Linear. Just one loop)
+**Code 2:**  **O(n)**  (Similar to Code 3, more space use might change the speed slightly)
+
+ **Reasoning**
+- **Code 1 & 3** iterate through the array only once. However, in Code 3 they do this n-times
+- **Code 2** uses an extra dynamic memory allocation and requires some extra loops  for efficient calculating. It is much more computationally complex
+
+
+Let me know if you have other coding scenarios you'd like analyzed! "

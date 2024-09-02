@@ -1,0 +1,3 @@
+"A quick and simple code in C++ that implements the sliding window technique to find the maximum value of an increasing subsequence within a one-dimensional vector.
+
+The `deque` queue allows efficient popping and pushing at every step while iterating through the vector, thus optimizing memory usage."
