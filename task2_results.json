@@ -1,11 +1,3774 @@
 {
     "gemma2:2b": {
-        "temperature=1.5": {}
+        "temperature=0.0": {
+            "Q: I have three piece of code rank them by time complexity Code: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "Here's a breakdown of the time complexities for your code snippets:
+
+**Code A:**  `sumArray` (nested loops) - **O(n^2)** 
+   * This is because it has nested loops that iterate through the array. The complexity increases with the size of the array.
+
+**Code B:** `sumArray` (dynamic memory allocation) - **O(n)**
+    *  This code uses dynamic memory allocation to store intermediate sums, but still iterates through the array in a linear fashion. 
+
+
+**Code C:** `sumArray` (simple loop) - **O(n)**
+   * This is the most straightforward implementation and has a time complexity of O(n).
+
+**Code D:**  `sumArray` (no loops) - **O(n)**
+    * This code directly sums all elements in the array. 
+
+
+Let me know if you'd like more details on any specific aspect! ",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "Here's a breakdown of the time complexities for each code snippet:
+
+**Code 1:**  O(n^2) - The nested loops lead to quadratic complexity.
+
+**Code 2:** O(n) -  The loop iterates through the array once, making it linear.
+
+**Code 3:** O(n) - Simple and direct summation of elements.
+
+
+Let me know if you'd like a more detailed explanation! 
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+
+    give me very short answer and rememberremember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)!
+    A:
+    ": "Here's a breakdown of the time complexities:
+
+**Rank:**
+
+1. **Code 3 (O(n))**:  This is the simplest and fastest. It iterates through the array once to calculate the sum.
+2. **Code 2 (O(n))**: This uses dynamic programming, which can be slightly more efficient than a simple loop for some cases. 
+3. **Code 1 (O(n^2))**:  This has nested loops that iterate over the array multiple times. The complexity increases significantly with larger arrays.
+
+
+**Explanation:**
+
+* **Time Complexity:** How long it takes to run the code, measured in terms of operations. 
+    * **O(n):** Linear time - the number of operations is directly proportional to the size of the input (array).
+    * **O(n^2):** Quadratic time - the time increases with the square of the input size. 
+
+
+Let me know if you'd like a more detailed explanation! ",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    remember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)
+    give me very short answer!
+    A:
+    ": "Here's a breakdown of the time complexities:
+
+**Code 1:** O(n^2) -  Nested loops lead to quadratic complexity.
+**Code 2:** O(n) -  Efficient, uses dynamic programming for summation.
+**Code 3:** O(n) - Simple and direct, linear time complexity. 
+
+
+Let me know if you'd like a more detailed explanation! 
+",
+            "Q: give me the efficiency of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The code's efficiency is **O(N)**, where N is the size of the input array `nums`. 
+
+**Explanation:**
+
+* The core logic involves iterating through the array using a sliding window approach. 
+* This uses deque for efficient insertion and removal operations (average O(1) time complexity). 
+
+
+Let me know if you'd like a more detailed breakdown! 
+",
+            "Q: give me the efficiency and big O notation of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "## Efficiency and Big O Notation Analysis:
+
+**Efficiency:** 
+* **Time Complexity:**  O(N) - The code iterates through the input array `nums` once.
+* **Space Complexity:** O(K) - We use a deque to store the sliding window elements, which has a size proportional to the window size `k`.
+
+
+**Big O Notation:**
+
+* **Time Complexity:**  O(N) 
+* **Space Complexity:** O(K) 
+
+
+
+**Explanation:**
+
+The code uses a deque (double-ended queue) for efficient sliding window operations. The time complexity is linear as we iterate through the array once, and the space complexity is proportional to the window size `k`. 
+"
+        },
+        "temperature=0.5": {
+            "Q: I have three piece of code rank them by time complexity Code: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "Here's a breakdown of the time complexities for each code snippet:
+
+**Code A:**  O(n^2), where 'n' is the size of the array. This function has nested loops, resulting in quadratic complexity.
+
+**Code B:** O(n) - The algorithm uses only one loop to calculate the sum. 
+
+**Code C:** O(n) -  This code also utilizes a single loop for calculating the sum.
+
+
+Let me know if you'd like a more detailed explanation of any of these complexities! 
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "Here's a breakdown of the time complexities for each code snippet:
+
+**Code 1: O(n^2)** -  The nested loops lead to quadratic complexity.
+
+**Code 2: O(n)** - The loop iterates through the array once, making it linear.
+
+**Code 3: O(n)** - Simple and direct summation, linear time complexity. 
+
+
+Let me know if you'd like a more detailed explanation! 
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+
+    give me very short answer and rememberremember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)!
+    A:
+    ": "Here's a breakdown of the time complexities:
+
+**Code 1 (Worst): O(n^2)** 
+   - The nested loops result in quadratic complexity. It's doing a lot of work for each element.
+
+**Code 2 (Moderate): O(n)** 
+   - This uses dynamic programming to calculate sums, reducing the number of operations. Still has some loops.
+
+**Code 3 (Best): O(n)**
+    -  A simple loop that directly adds all elements is very efficient.
+
+
+Let me know if you'd like more details on how these time complexities break down! 
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    remember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)
+    give me very short answer!
+    A:
+    ": "Here's a breakdown of the time complexities:
+
+**Code 3:** **O(n)** -  Linear Time Complexity. It iterates through the array once.
+
+**Code 2:** **O(n)** - Linear Time Complexity. The algorithm uses a loop to calculate sums, which is linear.
+
+**Code 1:** **O(n^2)** - Quadratic Time Complexity. The nested loops lead to quadratic complexity.  
+
+
+Let me know if you'd like more details on why! 
+",
+            "Q: give me the efficiency of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The code has a **low efficiency** due to the repeated use of `deque` and its operations, especially when handling large arrays. 
+
+
+Here's why:
+
+* **Deque Operations:**  Each time you insert or remove elements from the deque, it requires constant-time (O(1)) operations.  
+* **Inefficient Sliding Window:** The sliding window logic is not as optimized as possible. You need a more efficient way to track the maximum value within each window.
+
+**Potential Improvements:**
+
+* **Use a `std::vector` for efficiency in tracking the maximum values.** 
+* **Explore using a better data structure like a binary search tree or a min-heap for optimal sliding window operations.**  
+
+
+
+Let me know if you have any other code snippets you'd like to analyze! ",
+            "Q: give me the efficiency and big O notation of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "## Efficiency and Big O Notation Analysis:
+
+**Efficiency:** 
+- **Time Complexity:**  O(N) - The code iterates through the input array once.
+- **Space Complexity:** O(K) - It uses a deque to store the sliding window, which has a size equal to the window size 'k'.
+
+
+**Big O Notation:**
+
+* **Time Complexity: O(N)**  - Linear as it processes the input array once. 
+* **Space Complexity: O(K)** - Linear in relation to the window size 'k' used. 
+
+
+
+Let me know if you have any other code snippets you'd like analyzed! 
+"
+        },
+        "temperature=1.5": {
+            "Q: I have three piece of code rank them by time complexity Code: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "Here's a breakdown of the time complexities and rankings:
+
+**1. `sumArray(int arr[], int size)` (Basic Iteration): O(n) Time Complexity  **
+   - Simple, direct summing using nested loops to iterate over elements
+
+ **2. `sumArray(int arr[], int size)`  (Optimized Using Pointer): O(n) Time Complexity**
+   - Utilizes dynamic memory allocation for a space-saving approach 
+
+**3. `sumArray(int arr[], int size)` (Using sum of array) :O(n) Time Complexity**
+    - Direct summing in one loop using linear scan  
+
+
+**General:** All three code examples exhibit O(n) time complexity when considering the most common case of arrays where n is the length of the array.
+ 
+**Important Considerations**
+
+* **Array size (`size`)**: The actual space usage, and potential memory-related overhead depends on whether you're working with `std::vectors`, lists, or arrays.
+
+Let me know if you want more details about specific parts! ",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "Here's a breakdown of the complexity for your code examples. The answer assumes **`size` is constant:**
+
+* **Code 1 (O(n\u00b2))**  Time complexity depends on `i`.  The nested loops have significant operations at times, like in O(N^2)
+* **Code 3 (O(n))** This is straightforward: loop iteration directly adds values to sum. The overall number of iterations is `n` in each loop.   It's simple and the complexity is low in terms of size.  
+* **Code 2 (O(n))** Same as Code 3. 
+
+
+Let me know if you want a deeper dive into any specific parts or further code examples! ",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+
+    give me very short answer and rememberremember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)!
+    A:
+    ": "Here's a breakdown of the code complexity (from best to worst):
+
+**A:** 
+1. **Code 3: O(n)** - Linear Time Complexity: The simplest approach, adding each element in the array directly results in constant time for each loop operation, hence a linear relationship with the size.
+2. **Code 2: O(n) ** -  Uses an additional variable to calculate cumulative sum (in some cases more complex but still O(n)) :   We need more understanding of its implementation details
+3. **Code 1: O(n^2)** - Time complexity of code 1 is quadratic due to the nested loops, resulting in n*n iterations within each loop  
+
+Let me know if you'd like a deeper explanation of any particular part!",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    remember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)
+    give me very short answer!
+    A:
+    ": "Here's the time complexity breakdown:
+
+**1. Code 3:** O(n) - Linear time.  This is the fastest as it directly sums up all elements of an array in constant space complexity (not just a list of sums to store). 
+
+ **2. Code 2:** O(n) in the best case. Time is O(n) since all we are doing is adding and moving forward, or storing one index on memory at each loop iteration. The worst-case will take some time when the array gets larger (linear to size as well).
+
+ **3. Code 1:**  O(n\u00b2) in the best case or worst-case scenario. It is O(n\u00b2) as the two nested loops go through all possible index combinations within the size of the given array. This code suffers in time complexity, leading it to run slower when compared to the previous examples.
+
+**In short:** 
+*  Code 3: Fastest.
+*  Code 2 & 1:  Very Similar.
+",
+            "Q: give me the efficiency of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The efficiency of the code is **O(n)** in the average case, and likely  **O(N^2) *worst-case*. 
+
+
+**Explanation:**
+
+* It iterates through the `nums` vector with a window size (`k`), performing an array-based scan. 
+* However, some elements are repeated. So we will have to maintain that elements in queue and if they are found we will skip over them (we have to check from front or end depending on the direction).
+
+
+Let me know if you'd like a detailed breakdown of the time complexity!",
+            "Q: give me the efficiency and big O notation of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "Here's a breakdown of the code's efficiency and Big O notation:
+
+**Efficiency:**
+
+* **Time Complexity:**  O(N) \u2013  You are iterating through `nums` exactly once (excluding cases like removing elements).
+
+**Big O Notation:**
+ 
+ * **Best-case (Straightforward sliding window):** O(N) where 'N' is the number of integers. 
+ * **Worst-case (Multiple overlapping/removing windows):** O(K), where K is the size of the sliding window
+    
+
+**Explanation**
+
+
+This code utilizes a deque to store elements for your sliding window. This approach ensures that you always have the largest element within the window and its removal at each step can be easily tracked, providing O(N) efficiency when you are only looking at a particular value inside a given time period.
+
+
+
+Let me know if you'd like further details or more context! "
+        }
     },
     "deepseek-coder:1.3b": {
-        "temperature=1.5": {}
+        "temperature=0.0": {
+            "Q: I have three piece of code rank them by time complexity Code: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "Sure. Here's the time complexity of each code snippet in terms of Big O notation (denoted as `O()`):
+- The first piece of code is a simple loop that iterates over an array twice, which gives it a time complexity of 2*n where n represents the size of the input. This can be considered to have linear runtime because each element in the list needs to be visited at least once (the outer and inner loops).
+- The second piece is similar but with additional memory allocation for sums array using dynamic programming approach, which gives it a time complexity also 2*n where n represents size of input. This can still considered as linear runtime because each element in the list needs to be visited at least once (the outer and inner loops) while we are allocating space dynamically with `new` operator for sums array that is another O(n).
+- The third piece only iterates over an initial set of elements, which gives it a time complexity as n. This can still considered linear runtime because each element in the list needs to be visited at least once (the outer loop), but since we are not allocating any additional space for sums array or dynamic memory allocation with `new` operator here too that is also O(n).
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "Sure. Here's the time complexity analysis for each code snippet based on Big O notation (O):
+- Code 1 is not an efficient solution because it has a nested loop which makes its runtime proportional to square of size n, ie., quadratic in nature due to two loops running from start till end and inside these inner loops. This results into linear time complexity -> Theta(n^2). It's the best we can do for this problem as there are multiple valid solutions (each with a different runtime) that could be used depending on specific requirements or constraints of your program, such as sorting algorithms etc., which makes it inefficient.
+- Code 2 is more efficient than code one because instead of recomputation and storing the sum at each step we only store them until current index (i), then add up to get totalSum from sums array after loop ends ie., linear time complexity -> Theta(n). This makes it faster for large inputs.
+- Code 3 is also efficient as its runtime remains constant, O(n) because there's only one iteration over the input data (linear), making this solution more optimal in terms of space and speed than other solutions due to their simplicity nature which allows them not needing additional memory allocation or deletion operations for cleanup.
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+
+    give me very short answer and rememberremember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)!
+    A:
+    ": "Sure! Here's how you can evaluate each code snippet based on time complexity. 
+
+Code Snippets | Time Complexity (Best Case) |  Avg-Case  | Worst case  |  Efficiency Ranking   | Remarks   
+----------------|----------------------------------|---------------|--------------|----------------------------------------------------|  
+1               | O(n^2), n is the size of array    |O(n^3/6)      |O(n^4)        |Inefficient, not recommended for large arrays.     |  
+2 (average case and worst-case time complexity are same as code 1 due to dynamic memory allocation.) | O(n log n), best possible but still can be improved by using binary search or other divide & conquer algorithms   |O(n^3/6)      |O(n^4)        |Inefficient, not recommended for large arrays.     |  
+2               | Average case: O(1). Worst-case time complexity is also same as code 1 due to constant memory usage and no additional overheads (like cache misses or other factors that can slow down the operation in a worst scenario) |Average Case, Same As Code_1| 
+3               | Average case: O(n), Worst-case time complexity is also same as code 2 due to constant memory usage and no additional overheads (like cache misses or other factors that can slow down the operation in a worst scenario) |Average Case, Same As Code_1| 
+4               | Average case: O(n), Worst-case time complexity is same as code 2 due to dynamic memory allocation and no additional overheads (like cache misses or other factors that can slow down the operation in a worst scenario) |Average Case, Same As Code_1| 
+5               | Average case: O(n), Worst-case time complexity is same as code 3 due to constant memory usage and no additional overheads (like cache misses or other factors that can slow down the operation in a worst scenario) |Average Case, Same As Code_1| 
+6               | Average case: O(n log n), Worst-case time complexity is same as code 3 due to dynamic memory allocation and no additional overheads (like cache misses or other factors that can slow down the operation in a worst scenario) |Average Case, Same As Code_1| 
+7               | Average case: O(n^2), Worst-case time complexity is same as code 4 due to dynamic memory allocation and no additional overheads (like cache misses or other factors that can slow down the operation in a worst scenario) |Average Case, Same As Code_1| 
+8               | Average case: O(n^2), Worst-case time complexity is same as code 5 due to constant memory usage and no additional overheads (like cache misses or other factors that can slow down the operation in a worst scenario) |Average Case, Same As Code_1| 
+9               | Average case: O(n^2), Worst-case time complexity is same as code 5 due to dynamic memory allocation and no additional overheads (like cache misses or other factors that can slow down the operation in a worst scenario) |Average Case, Same As Code_1| 
+Code Snippets Ranking:  3rd(best), then second best & last least efficient. In this case it'll be 2nd and most of them are not recommended for large arrays due to their time complexity is same as the first one (O(n^4)). The third code snippet has a worst-case scenario which can also slow down operation in terms of big O notation, but its average & best case scenarios have similar or better performance than it.
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    remember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)
+    give me very short answer!
+    A:
+    ": "Sure. Based on time complexity analysis of these three codes below are their ranks (most to least efficient): 
+1st Code - O(n^2), because it has a nested loop which runs n times for each element in the array, leading us towards quadratic runtime ie., O(n\u00b2). This is not very efficient. The second code and third ones have linear time complexity as they only iterate through once or twice respectively but still this can be considered less optimal due to its use of dynamic memory allocation (heap) which could lead the program into inefficient usage if large arrays are processed, leading us towards O(n).
+",
+            "Q: give me the efficiency of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The efficiency of the provided code can be analyzed by looking at its time complexity and space complexity in terms of both Big O notation (time/space). 
+
+Time Complexity Analysis: The main part that takes longer to execute is inside while loop where it checks if current element `nums[i]` should go into deque or not. This operation has a worst-case time complexity as we are checking all elements in the previous window (which can be at most k). Therefore, this portion of code's overall time complexity would also fall under O(k), where 'n', is size of nums array and 'k'.
+The space Complexity Analysis: The deque `cont` takes up a constant amount of memory regardless the input. So its total storage requirement remains linear with respect to n, i.e., it'll be proportional to O(1), which simplifies us from being in terms of time complexity (O(n)) into space efficiency as well due to usage only one data structure - deque `cont` that takes up constant amount memory regardless the input size 'k'.
+",
+            "Q: give me the efficiency and big O notation of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The efficiency of the code is O(n) because each element in nums array needs to be visited at most once, and we are using a deque (double-ended queue), which has both push_back() and pop_front operations on average constant time. The space complexity also depends heavily upon how many elements you're considering for the sliding window maximum problem: if k is small then it will have to store all n numbers, otherwise only one number in deque at a given point of time (as we are always removing from front and adding back).
+"
+        },
+        "temperature=0.5": {
+            "Q: I have three piece of code rank them by time complexity Code: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "The first code is the most efficient in terms of time complexity. It has a linear runtime (O(n^2)) as it iterates through each element once, and then another loop that runs up to this point for every additional iteration due to its nested loops structure which makes overall O(n^2) operation.
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "Sure. Here's the time complexity of each code snippet in terms of Big O notation (denoted by \"O\"):
+- Code 1 is `O(n^2)` because it has a nested loop where both loops iterate over n elements, and for every iteration inside inner\u5faa\u73af there are another i iterations. This results into quadratic time complexity which makes the code inefficient especially when dealing with larger data sets (i = size).
+- Code 2 is `O(n^3)` because it creates a new array of length \"size\" to store sums, and then iterates over an additional loop for every element. This results into cubic time complexity which makes the code more inefficient when dealing with larger data sets (i = size).
+- Code 3 is `O(n^2)` because it has a single nested loops where both iterations go through all elements of n length array, and no other loop or operation inside inner for iteration. This results into quadratic time complexity which makes the code inefficient when dealing with larger data sets (i = size).
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+
+    give me very short answer and rememberremember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)!
+    A:
+    ": "Sure! Here's your ranking based on time complexity. 
+Code1 has O(n^2) as its worst-case scenario because it performs a double loop (outer & inner). Code3 doesn\u2019t have any loops at all, so is the best case and also in terms of Big Oh notation with respect to input size n which will be represented by: `O(n)`. 
+Code2 has an average time complexity that's O((N^2)/2 + N), because it creates a new array (sum[]). This can have higher order than the worst case, but not as high or significant compared to Code1 which is already in its best scenario with respect to n i.e., `O(n)` time complexity and has no loops at all too due to dynamic memory allocation/deallocation operations that take up a constant amount of additional space (i.e.: O(N)).
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    remember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)
+    give me very short answer!
+    A:
+    ": "Code 1 has an overall time complexity of O(n^2), where n is the size of the array. This code uses two nested loops to iterate over each element, resulting in quadratic runtime efficiency for large input sizes (O(n\u00b2)). Code 3 also does a constant amount work regardless of its inputs and therefore doesn't have any overhead or time complexity that can be ranked as efficient/inefficient based on the problem requirements.
+",
+            "Q: give me the efficiency of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The efficiency of the given code is not clear from your question as it's a C++ implementation with time complexity O(n^2). 
+
+However, to provide you an efficient solution in terms of algorithmic and data structure usage. The provided function uses two deque (sliding window) for maximum value within each sliding windows which has worst-case performance of `O(N*K)` where N is the size of input array nums[] with K as length of a particular subarray to be considered in every iteration, and then we are returning all these max values. 
+
+In terms of time complexity: Each element (num[i]) will only ever get pushed into deque once at most - when it is the first one being added or if its value exceeds/is smaller than current maximum(s). Hence in worst case scenario, each num[] entry would be visited twice. Therefore overall O(N*K) time complexity can occur for this problem statement as well due to nested iteration over array of size N and length K windows respectively which is `O((n-k+1)* k )`
+",
+            "Q: give me the efficiency and big O notation of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The efficiency of the code is O((n - k + 1) * max), where n is the size of nums and k is the window length. This comes from two nested loops (one for each operation in our main loop). In worst case scenario, we may have to go through all elements once while processing a single element at every step within sliding\u7a97\u53e3(O((n - 1) * max)).
+"
+        },
+        "temperature=1.5": {
+            "Q: I have three piece of code rank them by time complexity Code: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "Sure. I've provided the time complexity analysis for each of your code snippets according to Big O notation (which describes worst-case scenario):
+
+In sumArray() function with first two versions, Time Complexity is `O(n^2)` because in both loops we are doing n iterations which results in quadratic growth. 3rd version has a linear complexity due to using array of size 'size' but accessing index [i-1] unnecessarily within the for loop making it linearly increase i, hence constant factor out leaving us with `O(n)`
+
+In sumArray() function second and third versions are equivalent since both have time complexity is O (N). The first version allocates an array of size 'size' while in each instance we only use 2 integers. And if there were multiple accesses to the same index, then additional iterations would not be performed thus having a constant linear complexity for these situations which remains `O(n)` even when using more space than expected (here used as sum array of size 'size' with extra integer).
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "The three code snippets you've provided have been well-implemented but their time complexity is not as optimal. They are all O(n^2) in terms of both space and time complexities, where n represents the size/length of array 'arr'. 
+This means that they can be considered very impractical or even impossible for larger inputs due to a big constant factor (the multiplication operation). Moreover there is no particular optimization strategy done anywhere which might make this code inefficient. Also because we are only performing one additional summation and not using any extra space, so their memory footprints remain relatively small compared to the other codes: O(n) for both time complexity of each function relative size (only a single integer allocation).
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+
+    give me very short answer and rememberremember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)!
+    A:
+    ": "Sure, here are your ranked scores for efficiency. 
+Code Ranking Efficiency wise (Most to Least) :-  1st - Code2(Dynamic Memory allocation), Second & Third rank would be Code3(Constant Time complexity). For a complete understanding of the worst case time complexities consider if sumArray() is called repeatedly on different arrays with slightly varying lengths, or once and immediately after.
+",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    remember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)
+    give me very short answer!
+    A:
+    ": "The efficiency of these codes depends on several factors including time complexity. 
+Code 1 (Iteration within loop): It has a complex way to sum up an array, using nested loops which increases computational effort and is less efficient than the other two methods in terms of memory usage because it re-computes values from scratch each iteration even when they've already been computed before by prepending new computations.
+Code 2 (Dynamic Memory allocation): It uses dynamic memory allocating an array for sums that gets destroyed as soon after function call ends which leads to less efficiency than the first code in terms of time complexity but potentially higher space consumption, especially if large arrays are involved or very heavy computation is done within it and hence has been optimized.
+Code 3 (Single Pass): This version doesn't use dynamic memory allocation leading thus reducing its computational load while also providing more efficient way due to single pass through array without the need for extra recomputations in case of a sumArray method where values can be changed once initialized, thereby requiring less space but still taking slightly longer time. 
+So it would have been Code three (Single Pass) as an optimal and most least computational cost one among all possibilities considering worst-case scenarios only which is what's called Big O notation with respect to its efficiency score for these cases respectively according the algorithmic complexity, not their memory usage due at any significant time/space tradeoff.
+",
+            "Q: give me the efficiency of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "I'm sorry, but the provided code is a C++ implementation of max sliding window algorithm on array/deque with complexity O(n). There isn\u2019t any specific optimization here. The time it takes to complete this process could be considered as quite high (in general cases when dealing directly with dynamic arrays like deques) due its nature and size-dependant aspect, hence in many common situations or problems where there is not an inherent need for these operations that are done frequently by developers every day would say \"I'm sure it will complete quickly.\" However the provided algorithm implementation may vary based on how you see fit.
+",
+            "Q: give me the efficiency and big O notation of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The time complexity of the above code is O((N - k + 1) * K log (K)) due to traversing through a deque and insertion into it, as well in our solution for every index starting from 'k' till end. The space Complexity will be also same which could go upto N because of storing each window maximum number inside the array/dequeue one by One on running until length k is reached (or last).
+"
+        }
     },
     "qwen2:0.5b": {
-        "temperature=1.5": {}
+        "temperature=0.0": {
+            "Q: I have three piece of code rank them by time complexity Code: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "The time complexity of the first code snippet is O(n), where n is the length of the array. This is because it iterates through the array once to calculate the sum.
+
+The second code snippet has a different approach, using an array and a loop instead of recursion. It calculates the sum in-place by adding each element to the running total. The time complexity for this code snippet is O(n), as it uses only one loop iteration.
+
+Therefore, both snippets have the same time complexity of O(n).",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "The time complexity of the first code snippet is O(n), where n is the length of the array. This is because it iterates through the entire array once to calculate the sum.
+
+The second code snippet has a time complexity of O(1) since it only uses a constant amount of extra space (in this case, no additional memory allocation). The third code snippet also has a time complexity of O(n), but it's not an efficient algorithm and can be considered inefficient for large arrays.",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+
+    give me very short answer and rememberremember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)!
+    A:
+    ": "Code 1: The code has a time complexity of O(n), where n is the size of the array. This means that the running time increases linearly with the size of the input array.
+
+Code 2: The code has a time complexity of O(1), which means it can be solved in constant time, regardless of the size of the input array.
+
+Code 3: The code has a time complexity of O(n^2), which is quadratic. This means that the running time increases quadratically with the size of the input array.
+
+Therefore, Code 1 is the most efficient code, followed by Code 2, and Code 3 is the most inefficient code.",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    remember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)
+    give me very short answer!
+    A:
+    ": "Code 1: The code has a time complexity of O(n), where n is the size of the array. This means that the code runs in linear time for each element in the array.
+
+Code 2: The code has a time complexity of O(1), which means it runs in constant time regardless of the size of the input array. Therefore, this code is considered efficient.
+
+Code 3: The code has a time complexity of O(n^2), which means it runs in quadratic time for each element in the array. This code is inefficient because it uses nested loops to calculate the sum, resulting in an exponential time complexity.
+
+Therefore, Code 1 is the most efficient code, followed closely by Code 3, with a time complexity of O(n^2).",
+            "Q: give me the efficiency of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The code you provided is a C++ program that implements a sliding window approach to find the maximum value in each contiguous subarray of size `k` within an array. It uses a deque to efficiently track the current maximum and update it as it slides over the array.
+
+Here's a short explanation:
+
+1. The function takes two parameters: 
+   - nums (vector<int>&): The input vector.
+   - k (int): The size of the sliding window.
+
+2. The code starts by initializing an empty deque `cont` to track the current maximum value and its index in the original array. It also initializes a variable `ans` to store the result.
+
+3. Inside the function, it checks if there is more than one element in the deque. If so, it pops the front of the deque (which will be the current maximum) and adds the next element from the original array to the deque. This ensures that we always have a valid sliding window size of `k`.
+
+4. It then slides the window over the remaining elements of the original array by incrementing the index of the deque (`cont`), updating the maximum value in the deque, and checking if there is more than one element in the deque (indicating that it's time to slide the window). If so, it pops the front of the deque and adds the next element from the original array.
+
+5. After sliding the window over enough times, it checks if there are any elements left in the original array. If not, it means we've reached the end of the sliding window, and it returns the current maximum value as the result.
+
+6. Finally, it returns the updated `ans` vector containing the maximum values from each contiguous subarray of size `k`.
+
+This code efficiently finds the maximum value in each contiguous subarray within a given window size, making it an efficient solution for large datasets.",
+            "Q: give me the efficiency and big O notation of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The code provided is a C++ program that implements a sliding window approach to find the maximum value in each contiguous subarray of size `k` within an array. The time complexity of this algorithm is O(n), where n is the length of the input array, and the space complexity is also O(n). This is because we need to store all elements from the start of the array up to the current element in the sliding window.
+
+The code uses a `deque` (double-ended queue) to keep track of the indices of the elements that have been seen so far. It iterates through the input array, maintaining a sliding window of size `k`. For each element in the window, it checks if it is greater than or equal to the current maximum value and updates the deque accordingly. If not, it removes the front of the deque (which contains all elements from index 0 to the current element) and adds the current element back into the deque.
+
+The program then iterates through the remaining elements in the window, updating the maximum value found so far and appending the new maximum value to the result vector. This process continues until the window size reaches `k`.
+
+In terms of big O notation, this code has a time complexity of O(n) because it iterates through each element in the sliding window once. The space complexity is also O(n), as it uses an additional `deque` to store the indices of elements that have been seen so far."
+        },
+        "temperature=0.5": {
+            "Q: I have three piece of code rank them by time complexity Code: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "The code snippets you provided are for two different programming languages and have different time complexities. In the first snippet, a function `sumArray` is defined to calculate the sum of an array using a loop. It has a time complexity of O(n), where n is the size of the array.
+
+In the second snippet, both functions are called with the same input array and size, but they have different time complexities:
+
+- In the first snippet, `sumArray` calculates the sum of the array in place, using a loop. The time complexity is O(n).
+
+- In the second snippet, `sumArray` calculates the sum using recursion, which has a time complexity of O(n). However, this function also has space complexity (O(1)) because it uses local variables to store intermediate values.
+
+So, based on these differences, the two snippets have different time complexities.",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "The time complexity of each code snippet is O(n), where n is the number of elements in the array. The first two codes have linear space and constant time complexity, respectively, while the third code has O(1) space complexity because it only uses a single integer as its variable name.",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+
+    give me very short answer and rememberremember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)!
+    A:
+    ": "Code 1: This code has a time complexity of O(n) because it iterates through each element in the array once. The space complexity is also O(n).
+
+Code 2: This code has a time complexity of O(n) because it iterates through each element in the array n times.
+
+Code 3: This code has a time complexity of O(n^2) because it uses nested loops to iterate through each element in the array n times. The space complexity is also O(n^2).
+
+In terms of efficiency, Code 1 and Code 2 are both efficient because they have a linear time complexity that does not depend on the size of the input array, while Code 3 has quadratic time complexity due to nested loops.",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    remember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)
+    give me very short answer!
+    A:
+    ": "Code 2: 
+This code has a time complexity of O(n), where n is the size of the array. This means that for each element in the array, we need to perform an operation on it (addition or subtraction) which takes constant time.
+
+Code 3: 
+This code has a time complexity of O(1), which means that for any given input size, the number of operations performed is always equal to the size of the input array. This makes this code extremely efficient.
+
+Therefore, Code 2 is the most efficient, followed closely by Code 3 with a time complexity of O(1).",
+            "Q: give me the efficiency of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The code provided is a C++ function that implements a sliding window technique to find the maximum value in each contiguous subarray of size `k` within an array. The function takes a vector of integers and an integer k as input, then returns a vector of integers where each element represents the maximum value in the corresponding window of size k.
+
+The code is clear and well-structured, with comments explaining each step of the process. It also includes proper variable names and comments to make it easier to understand the code. The code can be executed by running the function on an input vector and checking the output against the expected result.
+
+In summary, this code efficiently finds the maximum value in each contiguous subarray of size k within an array using a sliding window technique.",
+            "Q: give me the efficiency and big O notation of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "The code provided is a C++ program that implements the quicksort algorithm to partition the input vector into two parts based on a sliding window approach. The efficiency of this implementation depends on the size of the input vector, i.e., k, which determines the size of the sliding window.
+
+Big O notation for the above code is O(nlogk) due to the logarithmic time complexity of quicksort algorithm and the sliding window approach.
+
+The given solution has a time complexity of O(nlogk), where n is the size of the input vector and k is the number of elements in the sliding window. The space complexity is O(k).
+
+In summary, the code provides an efficient solution to partition a vector into two parts based on a sliding window approach for quicksort, with a time complexity of O(nlogk) and a space complexity of O(k)."
+        },
+        "temperature=1.5": {
+            "Q: I have three piece of code rank them by time complexity Code: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "\"Given three piece of code each having a different time complexity - O(n), O(1), and O(log n)\"",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+    give me very short answer!
+    A:
+    ": "The code with the least complexity is Code 3: 
+
+```
+#include <iostream>
+
+int sumArray(int arr[], int size) {
+    int sum = 0;
+
+    for (int i = 0; i < size; ++i) {
+        sum += arr[i];
+    }
+    
+    return sum;
+}
+```
+
+The code in this snippet is as short as possible, only a single `int` declaration and assignment are needed, so it ranks very low on time complexity. The next snippet (Code 2) also only needs one `int* sums`, which makes it more concise.",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+
+    give me very short answer and rememberremember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)!
+    A:
+    ": "A: Code 3 has a time complexity of O(n), which means that running it once takes the maximum possible amount of time. Code 2 also has an O(n) time complexity.
+
+C++14 (optimized): O(n)
+
+Optimizing Code 2 would be to not use extra variables by changing i+1 instead of j from while loops to a comparison and incrementing, this way you have two arrays instead of one. To calculate the sums in O(1), using an int is efficient. However, O(n) time complexity still applies and that's not allowed as per C++14 rules.
+
+B: Code 2 has the minimum time complexity with O(n) since only constant O(1) operations are necessary for comparing elements and incrementing index to avoid unnecessary memory usage in these comparisons
+
+Rust code can also be O(n), but due to memory issues it is an option to implement dynamic memory allocation, unlike C++ code. It can't take more than O(1) operation when creating array indices in the Rust standard library.
+
+D: Code 3 and D do not match with what a typical efficient algorithm takes in practice.
+
+Optimizing the first solution would decrease execution time by around half compared to Code 2, though it might also be considered too complex for most problems.
+It's difficult without the code numbers you're using or checking which is the correct rank. Here are some ranking criteria:
+1. Complexity: C++14 allows an O(n) runtime with only constant O(1) operations instead of O(n^2).
+2. Optimizing Solution - C++, Rust, Java (J).
+3. Standard Language - C++
+   * Complexity can be significantly optimized using O(1) variables by iterating through each number from 0 to i, or
+   * O(n) with dynamic memory allocation.
+
+In summary: The most efficient rank would typically match Code 2's complexity score, where C++, Rust and Java (J) have better worst case scenarios. C++ can be the most expensive in terms of worst case time complexity but it also allows some optimization techniques to improve runtime complexity.
+Here are their ranks based on complexity scores:
+Code A (C++14 optimization): 3
+Optimizing Code B: 2
+Optimization not applied Code C (not O(n)): 1 
+Dynamic memory optimization with O(n) or better in Rust is usually efficient in practice due to optimized operations being used instead of O(n^2). 
+
+So based on those rules, rank #1 would be Code A (C++14 optimization), rank #2 should be code B (Optimizing Solution - C++, Rust, Java(J)), and finally rank #3 will fall under Optimization not Applied with O(n) or better in Rust.",
+            "Q: I have three piece of code rank them by time complexity.
+    Code 1: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            for (int j = 0; j <= i; ++j) {
+                if (j == i) {
+                    sum += arr[i];
+                }
+            }
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 2:
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int* sums = new int[size];
+        sums[0] = arr[0];
+
+        for (int i = 1; i < size; ++i) {
+            sums[i] = sums[i - 1] + arr[i];
+        }
+
+        int totalSum = sums[size - 1];
+        delete[] sums;  // Cleaning up allocated memory
+        return totalSum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    Code 3: 
+    #include <iostream>
+
+    int sumArray(int arr[], int size) {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int size = sizeof(arr) / sizeof(arr[0]);
+        std::cout << \"Sum: \" << sumArray(arr, size) << std::endl;
+        return 0;
+    }
+
+    remember give me a rank(which one is the most efficient, which one is the second and which one is the most inefficient)
+    give me very short answer!
+    A:
+    ": "\"Code 1\"",
+            "Q: give me the efficiency of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "Efficiency analysis is complex and varies with the problem solving algorithm used. The code in this example has O(1) complexity due to a deque-like container that automatically removes and inserts at every step.
+
+To simplify it, instead of creating all possible contorsions on the slide window (i.e., rolling backward one after the other), you can do:
+
+1. Iterate through all indices (not necessarily sequential).
+
+```python
+    for(int i = 0; i<nums.size(); i++){
+        if(nums[i] == cont.front()) { // checks if nums[i]==currentCont[i-1], which will be at least true as long as index sequence is the current sliding window.
+            cont.pop_front();
+        }
+        
+        cont.push_back(nums[i]);
+    }  
+    ans.push_back(cont.front());
+```
+
+So each time step, it pops off the left front (the value before nums[i]), puts back on right end. That's essentially an O(1) search operation at each step, and hence is the most efficient of your question.
+
+Here's a shorter form of this code:
+
+```python
+    for(int i = 0; i<nums.size(); i++){
+        if(nums[i] == cont.front()) { // checks if nums[i]==currentCont[i-1], which will be at least true as long as index sequence is the current sliding window.
+            cont.pop_front();
+        }
+        
+        cont.push_back(nums[i]);
+    }  
+```
+
+Which, on each pass through the loop, only needs to search at each step for once. That's why this form gets a time complexity of O(1).",
+            "Q: give me the efficiency and big O notation of below code. Code: 
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& nums, int k) {
+        deque<int> cont;
+        vector<int> ans;
+        cont.push_back(nums[0]);
+        for(int i =1; i<k;i++){
+            while(cont.back()<nums[i]){
+                cout<< \"current rp: \"<<nums[i]<<endl;
+                cout<<\" current deque:\";
+                for(auto j: cont){
+                    cout<< \"  \"<<j;
+                }
+                cout<<endl;
+                cont.pop_back();
+                if(cont.size()==0){
+                    break;
+                }
+            }
+            cont.push_back(nums[i]);
+        }
+        ans.push_back(cont.front());
+        for( int rp = k; rp<nums.size();rp++){
+            if(nums[rp-k] == cont.front()){
+                cont.pop_front();
+            }
+            if(cont.size()!=0){
+                while(cont.back()<nums[rp]){
+                    cont.pop_back();
+                    if(cont.size()==0){
+                        break;
+                    }
+                }
+            }
+            
+            cont.push_back(nums[rp]);
+            cout<< \"current rp: \"<<nums[rp]<<endl;
+            cout<<\" current deque:\";
+            for(auto i: cont){
+                cout<< \"  \"<<i;
+            }
+            cout<<endl;
+            ans.push_back(cont.front());
+        }
+        return ans;
+    }
+};
+
+    give me very short answer!
+    A:
+    ": "This is a sliding window algorithm in C++, and it finds the maximum of each contiguous sub-array with the length of 2 or more in an array, using O(k) time complexity. It has O(n^2) worst-case time complexity."
+        }
     }
 }
